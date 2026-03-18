@@ -34,16 +34,17 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(64, 12);
+            this.panel1.Location = new System.Drawing.Point(140, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1327, 939);
+            this.panel1.Size = new System.Drawing.Size(1293, 939);
             this.panel1.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1662, 978);
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.ClientSize = new System.Drawing.Size(1662, 1064);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
