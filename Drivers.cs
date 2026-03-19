@@ -15,41 +15,27 @@ namespace Transport_Management_System
         public Drivers()
         {
             InitializeComponent();
+
+            // --- FIXES FOR MISSING CONTENT ---
+
+            // 1. Adds scrollbars automatically if content is outside the window
+            this.AutoScroll = true;
+
+            // 2. Ensures the form starts in the middle of your screen
+            this.StartPosition = FormStartPosition.CenterScreen;
+
+            // 3. Optional: Uncomment the line below to make the window open maximized
+            // this.WindowState = FormWindowState.Maximized;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
+        // Keep your existing event handlers below
+        private void pictureBox1_Click(object sender, EventArgs e) { }
+        private void label1_Click(object sender, EventArgs e) { }
+        private void pictureBox2_Click(object sender, EventArgs e) { }
+        private void label2_Click(object sender, EventArgs e) { }
+        private void label3_Click(object sender, EventArgs e) { }
+        private void label4_Click(object sender, EventArgs e) { }
+        private void label5_Click(object sender, EventArgs e) { }
+        private void panel1_Paint(object sender, PaintEventArgs e) { }
     }
 }
