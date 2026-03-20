@@ -57,6 +57,11 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -76,6 +81,11 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.dateTimePicker2);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.label9);
@@ -86,17 +96,17 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Location = new System.Drawing.Point(233, 30);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1615, 1248);
+            this.panel1.Size = new System.Drawing.Size(1711, 1248);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // comboBox1
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(501, 191);
+            this.comboBox1.Location = new System.Drawing.Point(412, 189);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(233, 40);
+            this.comboBox1.Size = new System.Drawing.Size(259, 40);
             this.comboBox1.TabIndex = 9;
             this.comboBox1.Text = "Driver Name";
             // 
@@ -114,9 +124,9 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Arial", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(96, 190);
+            this.textBox1.Location = new System.Drawing.Point(71, 190);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(325, 39);
+            this.textBox1.Size = new System.Drawing.Size(259, 39);
             this.textBox1.TabIndex = 5;
             // 
             // label7
@@ -338,7 +348,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label9.Location = new System.Drawing.Point(818, 146);
+            this.label9.Location = new System.Drawing.Point(775, 145);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(197, 32);
             this.label9.TabIndex = 11;
@@ -347,9 +357,9 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Arial", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(824, 190);
+            this.textBox2.Location = new System.Drawing.Point(742, 190);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(325, 39);
+            this.textBox2.Size = new System.Drawing.Size(259, 39);
             this.textBox2.TabIndex = 10;
             // 
             // label10
@@ -357,7 +367,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label10.Location = new System.Drawing.Point(1185, 146);
+            this.label10.Location = new System.Drawing.Point(1119, 146);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(219, 32);
             this.label10.TabIndex = 13;
@@ -366,11 +376,69 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Arial", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(1191, 190);
+            this.textBox3.Location = new System.Drawing.Point(1114, 190);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(325, 134);
+            this.textBox3.Size = new System.Drawing.Size(400, 114);
             this.textBox3.TabIndex = 12;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(71, 327);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(259, 39);
+            this.dateTimePicker1.TabIndex = 14;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label11.Location = new System.Drawing.Point(90, 279);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(172, 32);
+            this.label11.TabIndex = 15;
+            this.label11.Text = "Driver DOB";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label12.Location = new System.Drawing.Point(431, 279);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(150, 32);
+            this.label12.TabIndex = 17;
+            this.label12.Text = "Join Date";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker2.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker2.Location = new System.Drawing.Point(412, 327);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(259, 39);
+            this.dateTimePicker2.TabIndex = 16;
+            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.comboBox2.Location = new System.Drawing.Point(742, 329);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(259, 40);
+            this.comboBox2.TabIndex = 18;
+            this.comboBox2.Text = "Gender";
             // 
             // Drivers
             // 
@@ -445,6 +513,11 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
 
