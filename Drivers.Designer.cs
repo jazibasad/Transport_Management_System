@@ -55,6 +55,8 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -74,6 +76,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.comboBox1);
@@ -82,7 +86,7 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Location = new System.Drawing.Point(233, 30);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1469, 1248);
+            this.panel1.Size = new System.Drawing.Size(1615, 1248);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -336,9 +340,9 @@
             this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label9.Location = new System.Drawing.Point(818, 146);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(189, 32);
+            this.label9.Size = new System.Drawing.Size(197, 32);
             this.label9.TabIndex = 11;
-            this.label9.Text = "Driver Name";
+            this.label9.Text = "Driver Phone";
             // 
             // textBox2
             // 
@@ -348,12 +352,32 @@
             this.textBox2.Size = new System.Drawing.Size(325, 39);
             this.textBox2.TabIndex = 10;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label10.Location = new System.Drawing.Point(1185, 146);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(219, 32);
+            this.label10.TabIndex = 13;
+            this.label10.Text = "Driver Address";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Arial", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(1191, 190);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(325, 134);
+            this.textBox3.TabIndex = 12;
+            // 
             // Drivers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1995, 1295);
+            this.ClientSize = new System.Drawing.Size(2055, 1295);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
@@ -419,6 +443,8 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }
 
