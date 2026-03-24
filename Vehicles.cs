@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Data.SqlClient;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,10 +17,42 @@ namespace Transport_Management_System
         {
             InitializeComponent();
         }
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\TransportDb.mdf;Integrated Security=True;Connect Timeout=30");
 
         private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (LPlateTb.Text == "" || MarkCb.SelectedIndex == -1 || ModelTb.Text == "" || VYearCb.SelectedIndex == -1 || EngTypeCb.SelectedIndex == -1 || ColorTb.Text == "" || MileageTb.Text == "" || TypeCb.SelectedIndex == -1 || BookedCb.SelectedIndex == -1 )
 
+            {
+                MessageBox.Show("Missing Information");
+                return;
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    SqlCommand cmd = new SqlCommand("insert into VehicleTbl (VLp,Vmark,Vmodel,VYear,VEngType,VColor,VMilleage,VType,Booked ) values (@VP, @Vma, @Vmo, @VY, @VEng, @VCo, @VMi, @VTy, @VB )", Con);
+                    cmd.Parameters.AddWithValue("@VP", LPlateTb.Text);
+                    cmd.Parameters.AddWithValue("@Vma", MarkCb.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("@Vmo", ModelTb.Text);
+                    cmd.Parameters.AddWithValue("@VY", VYearCb.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("@VEng", EngTypeCb.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("@VCo", ColorTb.Text);
+                    cmd.Parameters.AddWithValue("@VMi", MileageTb.Text);
+                    cmd.Parameters.AddWithValue("@VTy", TypeCb.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("@VB", BookedCb.SelectedItem.ToString());
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Vehicle Recorded");
+
+
+                    Con.Close();
+                }
+                catch (Exception Ex) {
+                    MessageBox.Show(Ex.Message);
+
+
+                }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

@@ -18,8 +18,8 @@ namespace Transport_Management_System
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            // Starts the Drivers form
-            Application.Run(new Drivers());
+         
+            Application.Run(new Vehicles());
         }
 
         // Imports the Windows library to handle High DPI scaling
