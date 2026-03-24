@@ -10,26 +10,11 @@ using System.Windows.Forms;
 
 namespace Transport_Management_System
 {
-    public partial class Users : Form
+    public partial class Customers : Form
     {
-        public Users()
+        public Customers()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Users_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
