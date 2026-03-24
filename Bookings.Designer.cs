@@ -320,9 +320,9 @@
             this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label7.Location = new System.Drawing.Point(583, 34);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(446, 56);
+            this.label7.Size = new System.Drawing.Size(471, 56);
             this.label7.TabIndex = 4;
-            this.label7.Text = "Manage Vehicles";
+            this.label7.Text = "Manage Bookings";
             // 
             // guna2CircleProgressBar1
             // 
