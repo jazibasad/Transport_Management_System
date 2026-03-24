@@ -16,5 +16,10 @@ namespace Transport_Management_System
         {
             InitializeComponent();
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
