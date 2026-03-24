@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Vehicles));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel8 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -102,6 +102,7 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(80, 72);
             this.panel8.TabIndex = 35;
+            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
             // pictureBox1
             // 
@@ -112,6 +113,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label13
             // 
@@ -123,6 +125,7 @@
             this.label13.TabIndex = 34;
             this.label13.Text = "Travels";
             this.label13.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // guna2CircleProgressBar1
             // 
@@ -138,6 +141,7 @@
             this.guna2CircleProgressBar1.TabIndex = 33;
             this.guna2CircleProgressBar1.Text = "guna2CircleProgressBar1";
             this.guna2CircleProgressBar1.Value = 100;
+            this.guna2CircleProgressBar1.ValueChanged += new System.EventHandler(this.guna2CircleProgressBar1_ValueChanged);
             // 
             // label2
             // 
@@ -149,6 +153,7 @@
             this.label2.Size = new System.Drawing.Size(145, 28);
             this.label2.TabIndex = 3;
             this.label2.Text = "Customers";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox3
             // 
@@ -159,6 +164,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // label3
             // 
@@ -170,6 +176,7 @@
             this.label3.Size = new System.Drawing.Size(117, 28);
             this.label3.TabIndex = 3;
             this.label3.Text = "Vehicles";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel7
             // 
@@ -180,6 +187,7 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(150, 138);
             this.panel7.TabIndex = 32;
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // label6
             // 
@@ -191,6 +199,7 @@
             this.label6.Size = new System.Drawing.Size(56, 28);
             this.label6.TabIndex = 3;
             this.label6.Text = "Exit";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // pictureBox7
             // 
@@ -201,6 +210,7 @@
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 2;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // pictureBox4
             // 
@@ -211,6 +221,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // label4
             // 
@@ -222,6 +233,7 @@
             this.label4.Size = new System.Drawing.Size(126, 28);
             this.label4.TabIndex = 3;
             this.label4.Text = "Bookings";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // pictureBox5
             // 
@@ -232,6 +244,7 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 2;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // panel6
             // 
@@ -242,6 +255,7 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(150, 138);
             this.panel6.TabIndex = 30;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // label5
             // 
@@ -253,6 +267,7 @@
             this.label5.Size = new System.Drawing.Size(142, 28);
             this.label5.TabIndex = 3;
             this.label5.Text = "Dashboard";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // pictureBox6
             // 
@@ -263,6 +278,7 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 2;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // panel5
             // 
@@ -273,6 +289,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(150, 138);
             this.panel5.TabIndex = 31;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // panel4
             // 
@@ -283,29 +300,30 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(150, 138);
             this.panel4.TabIndex = 29;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // guna2DataGridView2
             // 
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.guna2DataGridView2.ColumnHeadersHeight = 4;
             this.guna2DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView2.Location = new System.Drawing.Point(3, 982);
             this.guna2DataGridView2.Name = "guna2DataGridView2";
@@ -335,6 +353,7 @@
             this.guna2DataGridView2.ThemeStyle.RowsStyle.Height = 33;
             this.guna2DataGridView2.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView2.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.guna2DataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView2_CellContentClick);
             // 
             // label1
             // 
@@ -346,6 +365,7 @@
             this.label1.Size = new System.Drawing.Size(102, 28);
             this.label1.TabIndex = 3;
             this.label1.Text = "Drivers";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel3
             // 
@@ -356,6 +376,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(150, 138);
             this.panel3.TabIndex = 28;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // pictureBox2
             // 
@@ -366,6 +387,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // panel1
             // 
@@ -395,6 +417,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1535, 1165);
             this.panel1.TabIndex = 26;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // button3
             // 
@@ -408,6 +431,7 @@
             this.button3.TabIndex = 21;
             this.button3.Text = "Edit";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -421,6 +445,7 @@
             this.button2.TabIndex = 20;
             this.button2.Text = "Fire";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -434,6 +459,7 @@
             this.button1.TabIndex = 19;
             this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label10
             // 
@@ -445,6 +471,7 @@
             this.label10.Size = new System.Drawing.Size(199, 32);
             this.label10.TabIndex = 13;
             this.label10.Text = "Make Variant";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label9
             // 
@@ -456,6 +483,7 @@
             this.label9.Size = new System.Drawing.Size(96, 32);
             this.label9.TabIndex = 11;
             this.label9.Text = "Model";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // textBox2
             // 
@@ -464,6 +492,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(259, 39);
             this.textBox2.TabIndex = 10;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // comboBox1
             // 
@@ -481,6 +510,7 @@
             this.comboBox1.Size = new System.Drawing.Size(259, 40);
             this.comboBox1.TabIndex = 9;
             this.comboBox1.Text = "Motors";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -492,6 +522,7 @@
             this.label8.Size = new System.Drawing.Size(201, 32);
             this.label8.TabIndex = 6;
             this.label8.Text = "License Plate";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // textBox1
             // 
@@ -500,6 +531,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(259, 39);
             this.textBox1.TabIndex = 5;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label7
             // 
@@ -511,6 +543,7 @@
             this.label7.Size = new System.Drawing.Size(446, 56);
             this.label7.TabIndex = 4;
             this.label7.Text = "Manage Vehicles";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // panel2
             // 
@@ -521,6 +554,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(150, 138);
             this.panel2.TabIndex = 27;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // comboBox3
             // 
@@ -548,6 +582,7 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(259, 40);
             this.comboBox3.TabIndex = 24;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // comboBox4
             // 
@@ -560,6 +595,7 @@
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(259, 40);
             this.comboBox4.TabIndex = 26;
+            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // label14
             // 
@@ -571,6 +607,7 @@
             this.label14.Size = new System.Drawing.Size(189, 32);
             this.label14.TabIndex = 25;
             this.label14.Text = "Engine Type";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // label15
             // 
@@ -582,6 +619,7 @@
             this.label15.Size = new System.Drawing.Size(89, 32);
             this.label15.TabIndex = 28;
             this.label15.Text = "Color";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // textBox3
             // 
@@ -590,6 +628,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(259, 39);
             this.textBox3.TabIndex = 27;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label16
             // 
@@ -601,6 +640,7 @@
             this.label16.Size = new System.Drawing.Size(120, 32);
             this.label16.TabIndex = 30;
             this.label16.Text = "Mileage";
+            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // textBox4
             // 
@@ -609,6 +649,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(259, 39);
             this.textBox4.TabIndex = 29;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // comboBox5
             // 
@@ -639,6 +680,7 @@
             this.comboBox2.Size = new System.Drawing.Size(259, 40);
             this.comboBox2.TabIndex = 34;
             this.comboBox2.Text = "Status";
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -650,6 +692,7 @@
             this.label11.Size = new System.Drawing.Size(129, 32);
             this.label11.TabIndex = 33;
             this.label11.Text = "Booking";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // Vehicles
             // 
