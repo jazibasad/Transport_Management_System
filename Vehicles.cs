@@ -19,9 +19,9 @@ namespace Transport_Management_System
         }
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\TransportDb.mdf;Integrated Security=True;Connect Timeout=30");
 
-        private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
+        private void SaveBtn_Click(object sender, EventArgs e)
         {
-            if (LPlateTb.Text == "" || MarkCb.SelectedIndex == -1 || ModelTb.Text == "" || VYearCb.SelectedIndex == -1 || EngTypeCb.SelectedIndex == -1 || ColorTb.Text == "" || MileageTb.Text == "" || TypeCb.SelectedIndex == -1 || BookedCb.SelectedIndex == -1 )
+            if (textBox1.Text == "" || MarkCb.SelectedIndex == -1 || ModelTb.Text == "" || VYearCb.SelectedIndex == -1 || EngTypeCb.SelectedIndex == -1 || ColorTb.Text == "" || MileageTb.Text == "" || TypeCb.SelectedIndex == -1 || BookedCb.SelectedIndex == -1 )
 
             {
                 MessageBox.Show("Missing Information");
@@ -33,7 +33,7 @@ namespace Transport_Management_System
                 {
                     Con.Open();
                     SqlCommand cmd = new SqlCommand("insert into VehicleTbl (VLp,Vmark,Vmodel,VYear,VEngType,VColor,VMilleage,VType,Booked ) values (@VP, @Vma, @Vmo, @VY, @VEng, @VCo, @VMi, @VTy, @VB )", Con);
-                    cmd.Parameters.AddWithValue("@VP", LPlateTb.Text);
+                    cmd.Parameters.AddWithValue("@VP", textBox1.Text);
                     cmd.Parameters.AddWithValue("@Vma", MarkCb.SelectedItem.ToString());
                     cmd.Parameters.AddWithValue("@Vmo", ModelTb.Text);
                     cmd.Parameters.AddWithValue("@VY", VYearCb.SelectedItem.ToString());
@@ -45,7 +45,6 @@ namespace Transport_Management_System
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Vehicle Recorded");
 
-
                     Con.Close();
                 }
                 catch (Exception Ex) {
@@ -53,221 +52,185 @@ namespace Transport_Management_System
 
 
                 }
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
+            }
         }
 
         private void panel8_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void label13_Click(object sender, EventArgs e)
         {
-
         }
 
         private void guna2CircleProgressBar1_ValueChanged(object sender, EventArgs e)
         {
-
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
-
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
-
         }
 
         private void panel7_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void label6_Click(object sender, EventArgs e)
         {
-
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
-
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-
         }
 
         private void panel6_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
-
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-
         }
 
         private void panel5_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void guna2DataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void label11_Click(object sender, EventArgs e)
         {
+        }
 
+        private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Save button in Designer maps here; call SaveBtn_Click
+            SaveBtn_Click(sender, e);
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
         }
     }
 }
