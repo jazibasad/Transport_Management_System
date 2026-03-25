@@ -19,7 +19,7 @@ namespace Transport_Management_System
             ShowVehicles();
         }
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\TransportDb.mdf;Integrated Security=True;Connect Timeout=30");
-        
+
         private void ShowVehicles()
         {
             Con.Open();
@@ -30,12 +30,12 @@ namespace Transport_Management_System
             sda.Fill(ds);
             VehicleDGV.DataSource = ds.Tables[0];
             Con.Close();
-            
+
 
         }
         private void SaveBtn_Click(object sender, EventArgs e)
         {
-            if (LPlateTb.Text == "" || MarkCb.SelectedIndex == -1 || ModelTb.Text == "" || VYearCb.SelectedIndex == -1 || EngTypeCb.SelectedIndex == -1 || ColorTb.Text == "" || MilleageTb.Text == "" || TypeCb.SelectedIndex == -1 || BookedCb.SelectedIndex == -1 )
+            if (LPlateTb.Text == "" || MarkCb.SelectedIndex == -1 || ModelTb.Text == "" || VYearCb.SelectedIndex == -1 || EngTypeCb.SelectedIndex == -1 || ColorTb.Text == "" || MilleageTb.Text == "" || TypeCb.SelectedIndex == -1 || BookedCb.SelectedIndex == -1)
 
             {
                 MessageBox.Show("Missing Information");
@@ -61,7 +61,8 @@ namespace Transport_Management_System
 
                     Con.Close();
                 }
-                catch (Exception Ex) {
+                catch (Exception Ex)
+                {
                     MessageBox.Show(Ex.Message);
 
 

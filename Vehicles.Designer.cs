@@ -30,9 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Vehicles));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel8 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -51,7 +48,6 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.VehicleDGV = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -73,11 +69,12 @@
             this.label9 = new System.Windows.Forms.Label();
             this.ModelTb = new System.Windows.Forms.TextBox();
             this.MarkCb = new System.Windows.Forms.ComboBox();
-            this.LPlateTb = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.labele = new System.Windows.Forms.Label();
+            this.LPlateTb = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
+            this.VehicleDGV = new System.Windows.Forms.DataGridView();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -89,11 +86,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VehicleDGV)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VehicleDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // panel8
@@ -304,59 +301,6 @@
             this.panel4.TabIndex = 29;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
-            // VehicleDGV
-            // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.VehicleDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.VehicleDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.VehicleDGV.ColumnHeadersHeight = 4;
-            this.VehicleDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.VehicleDGV.DefaultCellStyle = dataGridViewCellStyle6;
-            this.VehicleDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.VehicleDGV.Location = new System.Drawing.Point(3, 542);
-            this.VehicleDGV.Name = "VehicleDGV";
-            this.VehicleDGV.RowHeadersVisible = false;
-            this.VehicleDGV.RowHeadersWidth = 82;
-            this.VehicleDGV.RowTemplate.Height = 33;
-            this.VehicleDGV.Size = new System.Drawing.Size(1529, 612);
-            this.VehicleDGV.TabIndex = 23;
-            this.VehicleDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.VehicleDGV.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.VehicleDGV.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.VehicleDGV.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.VehicleDGV.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.VehicleDGV.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.VehicleDGV.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.VehicleDGV.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.VehicleDGV.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.VehicleDGV.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VehicleDGV.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.VehicleDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.VehicleDGV.ThemeStyle.HeaderStyle.Height = 4;
-            this.VehicleDGV.ThemeStyle.ReadOnly = false;
-            this.VehicleDGV.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.VehicleDGV.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.VehicleDGV.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VehicleDGV.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.VehicleDGV.ThemeStyle.RowsStyle.Height = 33;
-            this.VehicleDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.VehicleDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.VehicleDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView2_CellContentClick);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -394,6 +338,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.VehicleDGV);
             this.panel1.Controls.Add(this.BookedCb);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.TypeCb);
@@ -404,7 +349,6 @@
             this.panel1.Controls.Add(this.EngTypeCb);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.VYearCb);
-            this.panel1.Controls.Add(this.VehicleDGV);
             this.panel1.Controls.Add(this.EditBtn);
             this.panel1.Controls.Add(this.DeleteBtn);
             this.panel1.Controls.Add(this.SaveBtn);
@@ -412,8 +356,8 @@
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.ModelTb);
             this.panel1.Controls.Add(this.MarkCb);
+            this.panel1.Controls.Add(this.labele);
             this.panel1.Controls.Add(this.LPlateTb);
-            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Location = new System.Drawing.Point(206, -11);
             this.panel1.Name = "panel1";
@@ -653,26 +597,26 @@
             this.MarkCb.Text = "Motors";
             this.MarkCb.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // labele
+            // 
+            this.labele.AutoSize = true;
+            this.labele.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labele.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labele.Location = new System.Drawing.Point(37, 152);
+            this.labele.Name = "labele";
+            this.labele.Size = new System.Drawing.Size(201, 32);
+            this.labele.TabIndex = 6;
+            this.labele.Text = "License Plate";
+            this.labele.Click += new System.EventHandler(this.label8_Click);
+            // 
             // LPlateTb
             // 
-            this.LPlateTb.AutoSize = true;
-            this.LPlateTb.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LPlateTb.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.LPlateTb.Location = new System.Drawing.Point(37, 152);
+            this.LPlateTb.Font = new System.Drawing.Font("Arial", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LPlateTb.Location = new System.Drawing.Point(43, 197);
             this.LPlateTb.Name = "LPlateTb";
-            this.LPlateTb.Size = new System.Drawing.Size(201, 32);
-            this.LPlateTb.TabIndex = 6;
-            this.LPlateTb.Text = "License Plate";
-            this.LPlateTb.Click += new System.EventHandler(this.label8_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Arial", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(43, 197);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(259, 39);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.LPlateTb.Size = new System.Drawing.Size(259, 39);
+            this.LPlateTb.TabIndex = 5;
+            this.LPlateTb.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label7
             // 
@@ -696,6 +640,17 @@
             this.panel2.Size = new System.Drawing.Size(150, 138);
             this.panel2.TabIndex = 27;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // VehicleDGV
+            // 
+            this.VehicleDGV.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.VehicleDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.VehicleDGV.Location = new System.Drawing.Point(0, 572);
+            this.VehicleDGV.Name = "VehicleDGV";
+            this.VehicleDGV.RowHeadersWidth = 82;
+            this.VehicleDGV.RowTemplate.Height = 33;
+            this.VehicleDGV.Size = new System.Drawing.Size(1532, 582);
+            this.VehicleDGV.TabIndex = 35;
             // 
             // Vehicles
             // 
@@ -732,7 +687,6 @@
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VehicleDGV)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -740,6 +694,7 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VehicleDGV)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -764,7 +719,6 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
-        private Guna.UI2.WinForms.Guna2DataGridView VehicleDGV;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -776,8 +730,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox ModelTb;
         private System.Windows.Forms.ComboBox MarkCb;
-        private System.Windows.Forms.Label LPlateTb;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label labele;
+        private System.Windows.Forms.TextBox LPlateTb;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox VYearCb;
@@ -791,5 +745,6 @@
         private System.Windows.Forms.ComboBox BookedCb;
         private System.Windows.Forms.Label label11;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
+        private System.Windows.Forms.DataGridView VehicleDGV;
     }
 }
