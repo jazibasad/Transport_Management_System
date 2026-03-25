@@ -33,7 +33,7 @@ namespace Transport_Management_System
                 {
                     Con.Open();
                     SqlCommand cmd = new SqlCommand("insert into VehicleTbl (VLp,Vmark,Vmodel,VYear,VEngType,VColor,VMilleage,VType,Booked ) values (@VP, @Vma, @Vmo, @VY, @VEng, @VCo, @VMi, @VTy, @VB )", Con);
-                    cmd.Parameters.AddWithValue("@VP", textBox1.Text);
+                    cmd.Parameters.AddWithValue("@VP", LPlateTb.Text);
                     cmd.Parameters.AddWithValue("@Vma", MarkCb.SelectedItem.ToString());
                     cmd.Parameters.AddWithValue("@Vmo", ModelTb.Text);
                     cmd.Parameters.AddWithValue("@VY", VYearCb.SelectedItem.ToString());
