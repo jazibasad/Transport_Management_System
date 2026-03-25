@@ -32,7 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -75,7 +75,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -95,23 +95,23 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel8.Controls.Add(this.pictureBox1);
+            this.panel8.Controls.Add(this.pictureBox8);
             this.panel8.Location = new System.Drawing.Point(1937, 12);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(80, 72);
             this.panel8.TabIndex = 35;
             this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
-            // pictureBox1
+            // pictureBox8
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(73, 64);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(73, 64);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 2;
+            this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label13
             // 
@@ -545,7 +545,7 @@
             this.DeleteBtn.TabIndex = 20;
             this.DeleteBtn.Text = "Delete";
             this.DeleteBtn.UseVisualStyleBackColor = false;
-            this.DeleteBtn.Click += new System.EventHandler(this.button2_Click);
+            this.DeleteBtn.Click += new System.EventHandler(this.Button2_Click);
             // 
             // SaveBtn
             // 
@@ -676,7 +676,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vehicles";
             this.panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
@@ -705,7 +705,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox3;

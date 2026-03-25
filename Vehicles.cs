@@ -31,8 +31,8 @@ namespace Transport_Management_System
             VehicleDGV.DataSource = ds.Tables[0];
             Con.Close();
 
-
         }
+
         private void SaveBtn_Click(object sender, EventArgs e)
         {
             if (LPlateTb.Text == "" || MarkCb.SelectedIndex == -1 || ModelTb.Text == "" || VYearCb.SelectedIndex == -1 || EngTypeCb.SelectedIndex == -1 || ColorTb.Text == "" || MilleageTb.Text == "" || TypeCb.SelectedIndex == -1 || BookedCb.SelectedIndex == -1)
@@ -71,10 +71,38 @@ namespace Transport_Management_System
             }
         }
 
+
+
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
-            
-        }
+            if (LPlateTb.Text == "")
+
+            {
+                MessageBox.Show("Select a Vehicle");
+                return;
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    SqlCommand cmd = new SqlCommand("delete from VehicleTbl where VLp = @VPlate ", Con);
+                    cmd.Parameters.AddWithValue("@VPlate", LPlateTb.Text);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Vehicle Deleted");
+
+                    Con.Close();
+                    ShowVehicles();
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+
+
+                }
+            }
+
+        }   
 
         private void VehicleDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -90,9 +118,13 @@ namespace Transport_Management_System
         }
 
 
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
+        }
 
 
-        
         private void panel8_Paint(object sender, PaintEventArgs e)
         {
         }
@@ -229,10 +261,6 @@ namespace Transport_Management_System
         {
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             // Save button in Designer maps here; call SaveBtn_Click
@@ -269,6 +297,11 @@ namespace Transport_Management_System
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-        } 
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            DeleteBtn_Click(sender, e); 
+        }
     }
 }
