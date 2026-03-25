@@ -20,6 +20,22 @@ namespace Transport_Management_System
         }
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\TransportDb.mdf;Integrated Security=True;Connect Timeout=30");
 
+
+        private void Clear()
+        {
+            LPlateTb.Text = "";
+            MarkCb.SelectedIndex = -1;
+            ModelTb.Text = "";
+            VYearCb.SelectedIndex = -1;
+            EngTypeCb.SelectedIndex = -1;
+            ColorTb.Text = "";
+            MilleageTb.Text = "";
+            TypeCb.SelectedIndex = -1;
+            BookedCb.SelectedIndex = -1;
+        }
+
+
+
         private void ShowVehicles()
         {
             Con.Open();
@@ -61,6 +77,7 @@ namespace Transport_Management_System
 
                     Con.Close();
                     ShowVehicles();
+                    Clear();   
                 }
                 catch (Exception Ex)
                 {
@@ -99,6 +116,7 @@ namespace Transport_Management_System
                     MessageBox.Show("Vehicle Updated");
                     Con.Close();
                     ShowVehicles();
+                    Clear();
                 }
                 catch (Exception Ex)
                 {
@@ -129,6 +147,7 @@ namespace Transport_Management_System
 
                     Con.Close();
                     ShowVehicles();
+                    Clear();  
                 }
                 catch (Exception Ex)
                 {
