@@ -16,6 +16,7 @@ namespace Transport_Management_System
         public Vehicles()
         {
             InitializeComponent();
+            ShowVehicles();
         }
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\TransportDb.mdf;Integrated Security=True;Connect Timeout=30");
         
