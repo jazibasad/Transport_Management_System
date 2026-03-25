@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle61 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle62 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle63 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -59,20 +59,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
@@ -81,6 +67,20 @@
             this.panel16 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -97,12 +97,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel7.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel12.SuspendLayout();
-            this.panel18.SuspendLayout();
-            this.panel20.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel16.SuspendLayout();
+            this.panel18.SuspendLayout();
+            this.panel20.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox7
@@ -170,26 +170,26 @@
             // 
             // guna2DataGridView2
             // 
-            dataGridViewCellStyle61.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle61;
-            dataGridViewCellStyle62.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle62.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle62.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle62.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle62.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle62.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle62.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle62;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.guna2DataGridView2.ColumnHeadersHeight = 4;
             this.guna2DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle63.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle63.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle63.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle63.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle63.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle63.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle63.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle63;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView2.Location = new System.Drawing.Point(3, 982);
             this.guna2DataGridView2.Name = "guna2DataGridView2";
@@ -444,64 +444,83 @@
             this.panel1.Size = new System.Drawing.Size(1535, 1165);
             this.panel1.TabIndex = 46;
             // 
-            // panel9
+            // panel13
             // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(69)))), ((int)(((byte)(156)))));
-            this.panel9.Controls.Add(this.label14);
-            this.panel9.Controls.Add(this.label12);
-            this.panel9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel9.Location = new System.Drawing.Point(146, 260);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(408, 187);
-            this.panel9.TabIndex = 42;
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(201)))), ((int)(((byte)(77)))));
+            this.panel13.Location = new System.Drawing.Point(952, 582);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(39, 187);
+            this.panel13.TabIndex = 57;
             // 
-            // panel10
+            // panel14
             // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(201)))), ((int)(((byte)(77)))));
-            this.panel10.Location = new System.Drawing.Point(146, 260);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(39, 187);
-            this.panel10.TabIndex = 43;
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(69)))), ((int)(((byte)(156)))));
+            this.panel14.Controls.Add(this.label10);
+            this.panel14.Controls.Add(this.label11);
+            this.panel14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel14.Location = new System.Drawing.Point(952, 582);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(408, 187);
+            this.panel14.TabIndex = 56;
             // 
-            // panel11
+            // label10
             // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(201)))), ((int)(((byte)(77)))));
-            this.panel11.Location = new System.Drawing.Point(952, 260);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(39, 187);
-            this.panel11.TabIndex = 45;
+            this.label10.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label10.Location = new System.Drawing.Point(137, 25);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(203, 62);
+            this.label10.TabIndex = 25;
+            this.label10.Text = "Customers";
             // 
-            // panel12
+            // label11
             // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(69)))), ((int)(((byte)(156)))));
-            this.panel12.Controls.Add(this.label8);
-            this.panel12.Controls.Add(this.label9);
-            this.panel12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel12.Location = new System.Drawing.Point(952, 260);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(408, 187);
-            this.panel12.TabIndex = 44;
+            this.label11.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label11.Location = new System.Drawing.Point(175, 87);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(118, 32);
+            this.label11.TabIndex = 37;
+            this.label11.Text = "Num";
             // 
-            // label8
+            // panel15
             // 
-            this.label8.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(166, 25);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(203, 62);
-            this.label8.TabIndex = 25;
-            this.label8.Text = "Driver";
+            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(201)))), ((int)(((byte)(77)))));
+            this.panel15.Location = new System.Drawing.Point(146, 582);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(39, 187);
+            this.panel15.TabIndex = 55;
             // 
-            // label9
+            // panel16
             // 
-            this.label9.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(175, 87);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(118, 32);
-            this.label9.TabIndex = 37;
-            this.label9.Text = "Num";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
+            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(69)))), ((int)(((byte)(156)))));
+            this.panel16.Controls.Add(this.label15);
+            this.panel16.Controls.Add(this.label16);
+            this.panel16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel16.Location = new System.Drawing.Point(146, 582);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(408, 187);
+            this.panel16.TabIndex = 54;
+            // 
+            // label15
+            // 
+            this.label15.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label15.Location = new System.Drawing.Point(157, 25);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(203, 62);
+            this.label15.TabIndex = 25;
+            this.label15.Text = "Users";
+            // 
+            // label16
+            // 
+            this.label16.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label16.Location = new System.Drawing.Point(168, 87);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(118, 32);
+            this.label16.TabIndex = 37;
+            this.label16.Text = "Num";
             // 
             // panel17
             // 
@@ -581,83 +600,64 @@
             this.label20.TabIndex = 37;
             this.label20.Text = "Num";
             // 
-            // panel13
+            // panel11
             // 
-            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(201)))), ((int)(((byte)(77)))));
-            this.panel13.Location = new System.Drawing.Point(952, 582);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(39, 187);
-            this.panel13.TabIndex = 57;
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(201)))), ((int)(((byte)(77)))));
+            this.panel11.Location = new System.Drawing.Point(952, 260);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(39, 187);
+            this.panel11.TabIndex = 45;
             // 
-            // panel14
+            // panel12
             // 
-            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(69)))), ((int)(((byte)(156)))));
-            this.panel14.Controls.Add(this.label10);
-            this.panel14.Controls.Add(this.label11);
-            this.panel14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel14.Location = new System.Drawing.Point(952, 582);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(408, 187);
-            this.panel14.TabIndex = 56;
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(69)))), ((int)(((byte)(156)))));
+            this.panel12.Controls.Add(this.label8);
+            this.panel12.Controls.Add(this.label9);
+            this.panel12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel12.Location = new System.Drawing.Point(952, 260);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(408, 187);
+            this.panel12.TabIndex = 44;
             // 
-            // label10
+            // label8
             // 
-            this.label10.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(137, 25);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(203, 62);
-            this.label10.TabIndex = 25;
-            this.label10.Text = "Customers";
+            this.label8.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label8.Location = new System.Drawing.Point(166, 25);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(203, 62);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "Driver";
             // 
-            // label11
+            // label9
             // 
-            this.label11.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Location = new System.Drawing.Point(175, 87);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(118, 32);
-            this.label11.TabIndex = 37;
-            this.label11.Text = "Num";
+            this.label9.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label9.Location = new System.Drawing.Point(175, 87);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(118, 32);
+            this.label9.TabIndex = 37;
+            this.label9.Text = "Num";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // panel15
+            // panel10
             // 
-            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(201)))), ((int)(((byte)(77)))));
-            this.panel15.Location = new System.Drawing.Point(146, 582);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(39, 187);
-            this.panel15.TabIndex = 55;
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(201)))), ((int)(((byte)(77)))));
+            this.panel10.Location = new System.Drawing.Point(146, 260);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(39, 187);
+            this.panel10.TabIndex = 43;
             // 
-            // panel16
+            // panel9
             // 
-            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(69)))), ((int)(((byte)(156)))));
-            this.panel16.Controls.Add(this.label15);
-            this.panel16.Controls.Add(this.label16);
-            this.panel16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel16.Location = new System.Drawing.Point(146, 582);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(408, 187);
-            this.panel16.TabIndex = 54;
-            // 
-            // label15
-            // 
-            this.label15.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label15.Location = new System.Drawing.Point(157, 25);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(203, 62);
-            this.label15.TabIndex = 25;
-            this.label15.Text = "Users";
-            // 
-            // label16
-            // 
-            this.label16.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label16.Location = new System.Drawing.Point(168, 87);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(118, 32);
-            this.label16.TabIndex = 37;
-            this.label16.Text = "Num";
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(69)))), ((int)(((byte)(156)))));
+            this.panel9.Controls.Add(this.label14);
+            this.panel9.Controls.Add(this.label12);
+            this.panel9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel9.Location = new System.Drawing.Point(146, 260);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(408, 187);
+            this.panel9.TabIndex = 42;
             // 
             // Dashboard
             // 
@@ -675,8 +675,9 @@
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Dashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel3.ResumeLayout(false);
@@ -701,12 +702,12 @@
             this.panel7.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
-            this.panel18.ResumeLayout(false);
-            this.panel20.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
+            this.panel18.ResumeLayout(false);
+            this.panel20.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
