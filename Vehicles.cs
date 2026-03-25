@@ -18,7 +18,18 @@ namespace Transport_Management_System
             InitializeComponent();
         }
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\TransportDb.mdf;Integrated Security=True;Connect Timeout=30");
-
+        
+        private void ShowVehicles()
+        {
+            Con.Open();
+            string Query = "select * from VehicleTbl";
+            SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
+            SqlCommandBuilder Builder = new SqlCommandBuilder(sda);
+            var ds = new DataSet();
+            sda.Fill(ds);
+            VehicleDGV.DataSource = ds.Tables[0];
+            Con.Close();
+        }
         private void SaveBtn_Click(object sender, EventArgs e)
         {
             if (LPlateTb.Text == "" || MarkCb.SelectedIndex == -1 || ModelTb.Text == "" || VYearCb.SelectedIndex == -1 || EngTypeCb.SelectedIndex == -1 || ColorTb.Text == "" || MilleageTb.Text == "" || TypeCb.SelectedIndex == -1 || BookedCb.SelectedIndex == -1 )
