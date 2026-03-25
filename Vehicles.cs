@@ -73,6 +73,42 @@ namespace Transport_Management_System
 
 
 
+        private void EditBtn_Click(object sender, EventArgs e)
+        {
+            if (LPlateTb.Text == "" || MarkCb.SelectedIndex == -1 || ModelTb.Text == "" || VYearCb.SelectedIndex == -1 || EngTypeCb.SelectedIndex == -1 || ColorTb.Text == "" || MilleageTb.Text == "" || TypeCb.SelectedIndex == -1 || BookedCb.SelectedIndex == -1)
+            {
+                MessageBox.Show("Missing Information");
+                return;
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    SqlCommand cmd = new SqlCommand("update VehicleTbl set Vmark=@Vma,Vmodel=@Vmo,VYear=@VY,VEngType=@VEng,VColor=@VCo,VMilleage=@VMi,VType=@VTy,Booked=@VB where VLp=@VP", Con);
+                    cmd.Parameters.AddWithValue("@VP", LPlateTb.Text);
+                    cmd.Parameters.AddWithValue("@Vma", MarkCb.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("@Vmo", ModelTb.Text);
+                    cmd.Parameters.AddWithValue("@VY", VYearCb.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("@VEng", EngTypeCb.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("@VCo", ColorTb.Text);
+                    cmd.Parameters.AddWithValue("@VMi", MilleageTb.Text);
+                    cmd.Parameters.AddWithValue("@VTy", TypeCb.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("@VB", BookedCb.SelectedItem.ToString());
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Vehicle Updated");
+                    Con.Close();
+                    ShowVehicles();
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
+        }
+
+
+
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
             if (LPlateTb.Text == "")
@@ -120,8 +156,7 @@ namespace Transport_Management_System
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-
+          
         }
 
 
@@ -131,6 +166,7 @@ namespace Transport_Management_System
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            Application.Exit();
         }
 
         private void label13_Click(object sender, EventArgs e)
@@ -259,6 +295,7 @@ namespace Transport_Management_System
 
         private void button3_Click(object sender, EventArgs e)
         {
+            EditBtn_Click(sender, e);
         }
 
         private void button1_Click(object sender, EventArgs e)
