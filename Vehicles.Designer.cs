@@ -28,13 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Vehicles));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel8 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.guna2CircleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,6 +51,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.VehicleDGV = new System.Windows.Forms.DataGridView();
             this.BookedCb = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.TypeCb = new System.Windows.Forms.ComboBox();
@@ -74,8 +73,6 @@
             this.LPlateTb = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
-            this.VehicleDGV = new System.Windows.Forms.DataGridView();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -90,8 +87,8 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VehicleDGV)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel8
@@ -119,29 +116,13 @@
             // 
             this.label13.Font = new System.Drawing.Font("Bookman Old Style", 19.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(69)))), ((int)(((byte)(156)))));
-            this.label13.Location = new System.Drawing.Point(1759, 686);
+            this.label13.Location = new System.Drawing.Point(1748, 484);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(269, 86);
             this.label13.TabIndex = 34;
             this.label13.Text = "Travels";
             this.label13.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label13.Click += new System.EventHandler(this.label13_Click);
-            // 
-            // guna2CircleProgressBar1
-            // 
-            this.guna2CircleProgressBar1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.guna2CircleProgressBar1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2CircleProgressBar1.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleProgressBar1.Location = new System.Drawing.Point(1770, 386);
-            this.guna2CircleProgressBar1.Minimum = 0;
-            this.guna2CircleProgressBar1.Name = "guna2CircleProgressBar1";
-            this.guna2CircleProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(69)))), ((int)(((byte)(156)))));
-            this.guna2CircleProgressBar1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleProgressBar1.Size = new System.Drawing.Size(225, 225);
-            this.guna2CircleProgressBar1.TabIndex = 33;
-            this.guna2CircleProgressBar1.Text = "guna2CircleProgressBar1";
-            this.guna2CircleProgressBar1.Value = 100;
-            this.guna2CircleProgressBar1.ValueChanged += new System.EventHandler(this.guna2CircleProgressBar1_ValueChanged);
             // 
             // label2
             // 
@@ -365,6 +346,26 @@
             this.panel1.Size = new System.Drawing.Size(1535, 1165);
             this.panel1.TabIndex = 26;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // VehicleDGV
+            // 
+            this.VehicleDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.VehicleDGV.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.VehicleDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.MenuBar;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.VehicleDGV.DefaultCellStyle = dataGridViewCellStyle3;
+            this.VehicleDGV.Location = new System.Drawing.Point(0, 572);
+            this.VehicleDGV.Name = "VehicleDGV";
+            this.VehicleDGV.RowHeadersWidth = 82;
+            this.VehicleDGV.RowTemplate.Height = 45;
+            this.VehicleDGV.Size = new System.Drawing.Size(1532, 582);
+            this.VehicleDGV.TabIndex = 35;
             // 
             // BookedCb
             // 
@@ -642,26 +643,6 @@
             this.panel2.TabIndex = 27;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // VehicleDGV
-            // 
-            this.VehicleDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.VehicleDGV.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.VehicleDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.MenuBar;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.VehicleDGV.DefaultCellStyle = dataGridViewCellStyle1;
-            this.VehicleDGV.Location = new System.Drawing.Point(0, 572);
-            this.VehicleDGV.Name = "VehicleDGV";
-            this.VehicleDGV.RowHeadersWidth = 82;
-            this.VehicleDGV.RowTemplate.Height = 45;
-            this.VehicleDGV.Size = new System.Drawing.Size(1532, 582);
-            this.VehicleDGV.TabIndex = 35;
-            // 
             // Vehicles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -670,7 +651,6 @@
             this.ClientSize = new System.Drawing.Size(2029, 1142);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.guna2CircleProgressBar1);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
@@ -702,9 +682,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VehicleDGV)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VehicleDGV)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -714,7 +694,6 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label13;
-        private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label3;
@@ -754,7 +733,6 @@
         private System.Windows.Forms.ComboBox TypeCb;
         private System.Windows.Forms.ComboBox BookedCb;
         private System.Windows.Forms.Label label11;
-        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private System.Windows.Forms.DataGridView VehicleDGV;
     }
 }

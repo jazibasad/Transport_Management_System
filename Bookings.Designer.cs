@@ -41,7 +41,6 @@
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.guna2CircleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.panel8 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -209,21 +208,6 @@
             this.label7.TabIndex = 4;
             this.label7.Text = "Manage Bookings";
             // 
-            // guna2CircleProgressBar1
-            // 
-            this.guna2CircleProgressBar1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.guna2CircleProgressBar1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2CircleProgressBar1.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleProgressBar1.Location = new System.Drawing.Point(1757, 350);
-            this.guna2CircleProgressBar1.Minimum = 0;
-            this.guna2CircleProgressBar1.Name = "guna2CircleProgressBar1";
-            this.guna2CircleProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(69)))), ((int)(((byte)(156)))));
-            this.guna2CircleProgressBar1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleProgressBar1.Size = new System.Drawing.Size(225, 225);
-            this.guna2CircleProgressBar1.TabIndex = 43;
-            this.guna2CircleProgressBar1.Text = "guna2CircleProgressBar1";
-            this.guna2CircleProgressBar1.Value = 100;
-            // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -248,7 +232,7 @@
             // 
             this.label13.Font = new System.Drawing.Font("Bookman Old Style", 19.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(69)))), ((int)(((byte)(156)))));
-            this.label13.Location = new System.Drawing.Point(1746, 650);
+            this.label13.Location = new System.Drawing.Point(1734, 478);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(269, 86);
             this.label13.TabIndex = 44;
@@ -524,7 +508,6 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.guna2CircleProgressBar1);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.panel7);
@@ -574,7 +557,6 @@
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar1;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label13;
