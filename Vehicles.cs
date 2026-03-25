@@ -60,6 +60,7 @@ namespace Transport_Management_System
                     MessageBox.Show("Vehicle Recorded");
 
                     Con.Close();
+                    ShowVehicles();
                 }
                 catch (Exception Ex)
                 {
