@@ -21,7 +21,7 @@ namespace Transport_Management_System
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
-            if (LPlateTb.Text == "" || MarkCb.SelectedIndex == -1 || ModelTb.Text == "" || VYearCb.SelectedIndex == -1 || EngTypeCb.SelectedIndex == -1 || ColorTb.Text == "" || MileageTb.Text == "" || TypeCb.SelectedIndex == -1 || BookedCb.SelectedIndex == -1 )
+            if (LPlateTb.Text == "" || MarkCb.SelectedIndex == -1 || ModelTb.Text == "" || VYearCb.SelectedIndex == -1 || EngTypeCb.SelectedIndex == -1 || ColorTb.Text == "" || MilleageTb.Text == "" || TypeCb.SelectedIndex == -1 || BookedCb.SelectedIndex == -1 )
 
             {
                 MessageBox.Show("Missing Information");
@@ -39,7 +39,7 @@ namespace Transport_Management_System
                     cmd.Parameters.AddWithValue("@VY", VYearCb.SelectedItem.ToString());
                     cmd.Parameters.AddWithValue("@VEng", EngTypeCb.SelectedItem.ToString());
                     cmd.Parameters.AddWithValue("@VCo", ColorTb.Text);
-                    cmd.Parameters.AddWithValue("@VMi", MileageTb.Text);
+                    cmd.Parameters.AddWithValue("@VMi", MilleageTb.Text);
                     cmd.Parameters.AddWithValue("@VTy", TypeCb.SelectedItem.ToString());
                     cmd.Parameters.AddWithValue("@VB", BookedCb.SelectedItem.ToString());
                     cmd.ExecuteNonQuery();
