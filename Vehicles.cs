@@ -71,6 +71,28 @@ namespace Transport_Management_System
             }
         }
 
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void VehicleDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            LPlateTb.Text = VehicleDGV.SelectedRows[0].Cells[0].Value.ToString();
+            MarkCb.SelectedItem = VehicleDGV.SelectedRows[0].Cells[1].Value.ToString();
+            ModelTb.Text = VehicleDGV.SelectedRows[0].Cells[2].Value.ToString();
+            VYearCb.SelectedItem = VehicleDGV.SelectedRows[0].Cells[3].Value.ToString();
+            EngTypeCb.SelectedItem = VehicleDGV.SelectedRows[0].Cells[4].Value.ToString();
+            ColorTb.Text = VehicleDGV.SelectedRows[0].Cells[5].Value.ToString();
+            MilleageTb.Text = VehicleDGV.SelectedRows[0].Cells[6].Value.ToString();
+            TypeCb.SelectedItem = VehicleDGV.SelectedRows[0].Cells[7].Value.ToString();
+            BookedCb.SelectedItem = VehicleDGV.SelectedRows[0].Cells[8].Value.ToString();
+        }
+
+
+
+
+        
         private void panel8_Paint(object sender, PaintEventArgs e)
         {
         }
@@ -247,6 +269,6 @@ namespace Transport_Management_System
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-        }
+        } 
     }
 }

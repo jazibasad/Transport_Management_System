@@ -371,11 +371,14 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.VehicleDGV.DefaultCellStyle = dataGridViewCellStyle2;
             this.VehicleDGV.Location = new System.Drawing.Point(0, 572);
+            this.VehicleDGV.MultiSelect = false;
             this.VehicleDGV.Name = "VehicleDGV";
             this.VehicleDGV.RowHeadersWidth = 82;
             this.VehicleDGV.RowTemplate.Height = 45;
+            this.VehicleDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.VehicleDGV.Size = new System.Drawing.Size(1532, 582);
             this.VehicleDGV.TabIndex = 35;
+            this.VehicleDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.VehicleDGV_CellContentClick);
             // 
             // BookedCb
             // 
