@@ -30,7 +30,8 @@ namespace Transport_Management_System
             sda.Fill(ds);
             VehicleDGV.DataSource = ds.Tables[0];
             Con.Close();
-            ShowVehicles();
+            
+
         }
         private void SaveBtn_Click(object sender, EventArgs e)
         {
