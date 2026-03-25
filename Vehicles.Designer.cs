@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Vehicles));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel8 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -304,33 +304,33 @@
             // 
             // VehicleDGV
             // 
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.White;
-            this.VehicleDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle28;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.VehicleDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.VehicleDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.VehicleDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.VehicleDGV.ColumnHeadersHeight = 4;
             this.VehicleDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle30.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.VehicleDGV.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.VehicleDGV.DefaultCellStyle = dataGridViewCellStyle3;
             this.VehicleDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.VehicleDGV.Location = new System.Drawing.Point(3, 982);
+            this.VehicleDGV.Location = new System.Drawing.Point(3, 542);
             this.VehicleDGV.Name = "VehicleDGV";
             this.VehicleDGV.RowHeadersVisible = false;
             this.VehicleDGV.RowHeadersWidth = 82;
             this.VehicleDGV.RowTemplate.Height = 33;
-            this.VehicleDGV.Size = new System.Drawing.Size(1529, 180);
+            this.VehicleDGV.Size = new System.Drawing.Size(1529, 612);
             this.VehicleDGV.TabIndex = 23;
             this.VehicleDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.VehicleDGV.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -426,7 +426,7 @@
             this.BookedCb.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.BookedCb.Location = new System.Drawing.Point(43, 660);
+            this.BookedCb.Location = new System.Drawing.Point(34, 457);
             this.BookedCb.Name = "BookedCb";
             this.BookedCb.Size = new System.Drawing.Size(259, 40);
             this.BookedCb.TabIndex = 34;
@@ -438,7 +438,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label11.Location = new System.Drawing.Point(46, 614);
+            this.label11.Location = new System.Drawing.Point(37, 411);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(118, 32);
             this.label11.TabIndex = 33;
@@ -455,7 +455,7 @@
             "Suv",
             "Sedan",
             "Hatchback"});
-            this.TypeCb.Location = new System.Drawing.Point(372, 463);
+            this.TypeCb.Location = new System.Drawing.Point(363, 319);
             this.TypeCb.Name = "TypeCb";
             this.TypeCb.Size = new System.Drawing.Size(259, 40);
             this.TypeCb.TabIndex = 32;
@@ -467,7 +467,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label16.Location = new System.Drawing.Point(727, 422);
+            this.label16.Location = new System.Drawing.Point(718, 278);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(120, 32);
             this.label16.TabIndex = 30;
@@ -477,7 +477,7 @@
             // MileageTb
             // 
             this.MileageTb.Font = new System.Drawing.Font("Arial", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MileageTb.Location = new System.Drawing.Point(722, 464);
+            this.MileageTb.Location = new System.Drawing.Point(713, 320);
             this.MileageTb.Name = "MileageTb";
             this.MileageTb.Size = new System.Drawing.Size(259, 39);
             this.MileageTb.TabIndex = 29;
@@ -488,7 +488,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label15.Location = new System.Drawing.Point(1073, 409);
+            this.label15.Location = new System.Drawing.Point(1064, 265);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(89, 32);
             this.label15.TabIndex = 28;
@@ -498,7 +498,7 @@
             // ColorTb
             // 
             this.ColorTb.Font = new System.Drawing.Font("Arial", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ColorTb.Location = new System.Drawing.Point(1079, 464);
+            this.ColorTb.Location = new System.Drawing.Point(1070, 320);
             this.ColorTb.Name = "ColorTb";
             this.ColorTb.Size = new System.Drawing.Size(259, 39);
             this.ColorTb.TabIndex = 27;
@@ -511,7 +511,7 @@
             this.EngTypeCb.Items.AddRange(new object[] {
             "Diesel",
             "Petrol"});
-            this.EngTypeCb.Location = new System.Drawing.Point(43, 468);
+            this.EngTypeCb.Location = new System.Drawing.Point(34, 324);
             this.EngTypeCb.Name = "EngTypeCb";
             this.EngTypeCb.Size = new System.Drawing.Size(259, 40);
             this.EngTypeCb.TabIndex = 26;
@@ -522,7 +522,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label14.Location = new System.Drawing.Point(46, 422);
+            this.label14.Location = new System.Drawing.Point(37, 278);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(189, 32);
             this.label14.TabIndex = 25;
@@ -551,7 +551,7 @@
             "2024",
             "2025",
             "2026"});
-            this.VYearCb.Location = new System.Drawing.Point(1096, 288);
+            this.VYearCb.Location = new System.Drawing.Point(1099, 198);
             this.VYearCb.Name = "VYearCb";
             this.VYearCb.Size = new System.Drawing.Size(259, 40);
             this.VYearCb.TabIndex = 24;
@@ -563,7 +563,7 @@
             this.EditBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EditBtn.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EditBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.EditBtn.Location = new System.Drawing.Point(687, 840);
+            this.EditBtn.Location = new System.Drawing.Point(790, 433);
             this.EditBtn.Name = "EditBtn";
             this.EditBtn.Size = new System.Drawing.Size(144, 64);
             this.EditBtn.TabIndex = 21;
@@ -577,7 +577,7 @@
             this.DeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeleteBtn.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.DeleteBtn.Location = new System.Drawing.Point(948, 840);
+            this.DeleteBtn.Location = new System.Drawing.Point(1051, 433);
             this.DeleteBtn.Name = "DeleteBtn";
             this.DeleteBtn.Size = new System.Drawing.Size(144, 64);
             this.DeleteBtn.TabIndex = 20;
@@ -591,7 +591,7 @@
             this.SaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaveBtn.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaveBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.SaveBtn.Location = new System.Drawing.Point(438, 840);
+            this.SaveBtn.Location = new System.Drawing.Point(541, 433);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(144, 64);
             this.SaveBtn.TabIndex = 19;
@@ -604,7 +604,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label10.Location = new System.Drawing.Point(1099, 242);
+            this.label10.Location = new System.Drawing.Point(1102, 152);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(190, 32);
             this.label10.TabIndex = 13;
@@ -616,7 +616,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label9.Location = new System.Drawing.Point(705, 242);
+            this.label9.Location = new System.Drawing.Point(708, 152);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(96, 32);
             this.label9.TabIndex = 11;
@@ -626,7 +626,7 @@
             // ModelTb
             // 
             this.ModelTb.Font = new System.Drawing.Font("Arial", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ModelTb.Location = new System.Drawing.Point(711, 287);
+            this.ModelTb.Location = new System.Drawing.Point(714, 197);
             this.ModelTb.Name = "ModelTb";
             this.ModelTb.Size = new System.Drawing.Size(259, 39);
             this.ModelTb.TabIndex = 10;
@@ -643,7 +643,7 @@
             "Nissan",
             "Hino",
             "Isuzu"});
-            this.MarkCb.Location = new System.Drawing.Point(381, 286);
+            this.MarkCb.Location = new System.Drawing.Point(384, 196);
             this.MarkCb.Name = "MarkCb";
             this.MarkCb.Size = new System.Drawing.Size(259, 40);
             this.MarkCb.TabIndex = 9;
@@ -655,7 +655,7 @@
             this.LPlateTb.AutoSize = true;
             this.LPlateTb.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LPlateTb.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.LPlateTb.Location = new System.Drawing.Point(34, 242);
+            this.LPlateTb.Location = new System.Drawing.Point(37, 152);
             this.LPlateTb.Name = "LPlateTb";
             this.LPlateTb.Size = new System.Drawing.Size(201, 32);
             this.LPlateTb.TabIndex = 6;
@@ -665,7 +665,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Arial", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(40, 287);
+            this.textBox1.Location = new System.Drawing.Point(43, 197);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(259, 39);
             this.textBox1.TabIndex = 5;

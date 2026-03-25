@@ -298,12 +298,12 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView2.Location = new System.Drawing.Point(3, 982);
+            this.guna2DataGridView2.Location = new System.Drawing.Point(3, 454);
             this.guna2DataGridView2.Name = "guna2DataGridView2";
             this.guna2DataGridView2.RowHeadersVisible = false;
             this.guna2DataGridView2.RowHeadersWidth = 82;
             this.guna2DataGridView2.RowTemplate.Height = 33;
-            this.guna2DataGridView2.Size = new System.Drawing.Size(1529, 180);
+            this.guna2DataGridView2.Size = new System.Drawing.Size(1529, 708);
             this.guna2DataGridView2.TabIndex = 23;
             this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -384,7 +384,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(652, 697);
+            this.button3.Location = new System.Drawing.Point(660, 359);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(144, 64);
             this.button3.TabIndex = 21;
@@ -397,7 +397,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(913, 697);
+            this.button2.Location = new System.Drawing.Point(921, 359);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(144, 64);
             this.button2.TabIndex = 20;
@@ -410,7 +410,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(403, 697);
+            this.button1.Location = new System.Drawing.Point(411, 359);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(144, 64);
             this.button1.TabIndex = 19;
@@ -424,7 +424,7 @@
             this.comboBox2.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.comboBox2.Location = new System.Drawing.Point(381, 347);
+            this.comboBox2.Location = new System.Drawing.Point(369, 205);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(259, 40);
             this.comboBox2.TabIndex = 18;
@@ -435,7 +435,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label10.Location = new System.Drawing.Point(1107, 303);
+            this.label10.Location = new System.Drawing.Point(1095, 161);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(268, 32);
             this.label10.TabIndex = 13;
@@ -444,7 +444,7 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Arial", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(1102, 347);
+            this.textBox3.Location = new System.Drawing.Point(1090, 205);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(400, 114);
@@ -455,7 +455,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label9.Location = new System.Drawing.Point(701, 303);
+            this.label9.Location = new System.Drawing.Point(689, 161);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(246, 32);
             this.label9.TabIndex = 11;
@@ -465,7 +465,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Arial", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(707, 348);
+            this.textBox2.Location = new System.Drawing.Point(695, 206);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(259, 39);
             this.textBox2.TabIndex = 10;
@@ -475,7 +475,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label8.Location = new System.Drawing.Point(30, 303);
+            this.label8.Location = new System.Drawing.Point(18, 161);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(238, 32);
             this.label8.TabIndex = 6;
@@ -484,7 +484,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Arial", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(36, 348);
+            this.textBox1.Location = new System.Drawing.Point(24, 206);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(259, 39);
             this.textBox1.TabIndex = 5;
