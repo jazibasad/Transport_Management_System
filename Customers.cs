@@ -212,5 +212,10 @@ namespace Transport_Management_System
             Obj.Show();
             this.Hide();
         }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }   

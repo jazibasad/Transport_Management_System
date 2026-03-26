@@ -79,6 +79,7 @@
             this.BestDriverLbl = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.BestCustLbl = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -594,7 +595,7 @@
             // 
             this.BestDriverLbl.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BestDriverLbl.ForeColor = System.Drawing.Color.Black;
-            this.BestDriverLbl.Location = new System.Drawing.Point(1734, 634);
+            this.BestDriverLbl.Location = new System.Drawing.Point(1731, 451);
             this.BestDriverLbl.Name = "BestDriverLbl";
             this.BestDriverLbl.Size = new System.Drawing.Size(260, 86);
             this.BestDriverLbl.TabIndex = 58;
@@ -605,11 +606,11 @@
             // 
             this.label9.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(1731, 458);
+            this.label9.Location = new System.Drawing.Point(1731, 344);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(260, 86);
             this.label9.TabIndex = 59;
-            this.label9.Text = "Most Income";
+            this.label9.Text = "Top Driver";
             this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // BestCustLbl
@@ -624,12 +625,24 @@
             this.BestCustLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BestCustLbl.Click += new System.EventHandler(this.label12_Click_1);
             // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(1734, 639);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(260, 86);
+            this.label11.TabIndex = 60;
+            this.label11.Text = "Top Customer";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(2003, 1071);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.BestCustLbl);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.BestDriverLbl);
@@ -731,5 +744,6 @@
         private System.Windows.Forms.Label BestDriverLbl;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label BestCustLbl;
+        private System.Windows.Forms.Label label11;
     }
 }
