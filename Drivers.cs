@@ -127,7 +127,7 @@ namespace Transport_Management_System
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
-            if (DrNameTb.Text == "" || GenCb.SelectedIndex == -1 || PhoneTb.Text == "" || DrAdd.Text == "" || RatingCb == -1 )
+            if (DrNameTb.Text == "" || GenCb.SelectedIndex == -1 || PhoneTb.Text == "" || DrAdd.Text == "" || RatingCb.SelectedIndex == -1 )
 
             {
                 MessageBox.Show("Missing Information");
