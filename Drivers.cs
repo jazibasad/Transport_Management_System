@@ -191,5 +191,36 @@ namespace Transport_Management_System
                 int.TryParse(DriverDGV.SelectedRows[0].Cells[0].Value.ToString(), out Key);
             }
         }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            if (Key == 0)
+
+            {
+                MessageBox.Show("Select a Driver");
+                return;
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    SqlCommand cmd = new SqlCommand("delete from DriverTbl where DrId = @DrKey ", Con);
+                    cmd.Parameters.AddWithValue("@DrKey", Key);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Driver Deleted");
+
+                    Con.Close();
+                    ShowDrivers();
+                    Clear();
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+
+
+                }
+            }
+        }
     }
 }
