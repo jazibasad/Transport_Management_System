@@ -145,8 +145,8 @@ namespace Transport_Management_System
                     cmd.Parameters.AddWithValue("@DRA", DrAdd.Text);
                     cmd.Parameters.AddWithValue("@DRD", DOB.Value.ToString());
                     cmd.Parameters.AddWithValue("@DRJ", JoinDate.Value.ToString());
-                    cmd.Parameters.AddWithValue("@DRG", GenCb.SelectedValue.ToString() ?? "");
-                    cmd.Parameters.AddWithValue("@DRR", RatingCb.SelectedValue.ToString() ?? "");
+                    cmd.Parameters.AddWithValue("@DRG", GenCb.SelectedItem?.ToString() ?? "");
+                    cmd.Parameters.AddWithValue("@DRR", RatingCb.SelectedItem?.ToString() ?? "");
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Driver Recorded");
 
