@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Bookings));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -38,32 +40,33 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.CustCb = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.DriverTb = new System.Windows.Forms.TextBox();
+            this.VehicleCb = new System.Windows.Forms.ComboBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.SaveBtn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BookingDGV = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.PickUpDate = new System.Windows.Forms.DateTimePicker();
             this.label17 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.RetDate = new System.Windows.Forms.DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.AmountTb = new System.Windows.Forms.TextBox();
+            this.EditBtn = new System.Windows.Forms.Button();
+            this.ClearBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -80,6 +83,7 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BookingDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -177,14 +181,14 @@
             this.pictureBox5.TabIndex = 2;
             this.pictureBox5.TabStop = false;
             // 
-            // comboBox4
+            // CustCb
             // 
-            this.comboBox4.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(34, 207);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(259, 40);
-            this.comboBox4.TabIndex = 26;
+            this.CustCb.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CustCb.FormattingEnabled = true;
+            this.CustCb.Location = new System.Drawing.Point(34, 207);
+            this.CustCb.Name = "CustCb";
+            this.CustCb.Size = new System.Drawing.Size(259, 40);
+            this.CustCb.TabIndex = 26;
             // 
             // label14
             // 
@@ -213,9 +217,9 @@
             this.panel8.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.Controls.Add(this.pictureBox1);
-            this.panel8.Location = new System.Drawing.Point(1937, 12);
+            this.panel8.Location = new System.Drawing.Point(1911, 12);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(80, 72);
+            this.panel8.Size = new System.Drawing.Size(80, 85);
             this.panel8.TabIndex = 45;
             // 
             // pictureBox1
@@ -227,6 +231,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label13
             // 
@@ -250,22 +255,22 @@
             this.label9.TabIndex = 11;
             this.label9.Text = "Driver";
             // 
-            // textBox2
+            // DriverTb
             // 
-            this.textBox2.Font = new System.Drawing.Font("Arial", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(711, 206);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(259, 39);
-            this.textBox2.TabIndex = 10;
+            this.DriverTb.Font = new System.Drawing.Font("Arial", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DriverTb.Location = new System.Drawing.Point(711, 206);
+            this.DriverTb.Name = "DriverTb";
+            this.DriverTb.Size = new System.Drawing.Size(259, 39);
+            this.DriverTb.TabIndex = 10;
             // 
-            // comboBox1
+            // VehicleCb
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(381, 205);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(259, 40);
-            this.comboBox1.TabIndex = 9;
+            this.VehicleCb.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VehicleCb.FormattingEnabled = true;
+            this.VehicleCb.Location = new System.Drawing.Point(381, 205);
+            this.VehicleCb.Name = "VehicleCb";
+            this.VehicleCb.Size = new System.Drawing.Size(259, 40);
+            this.VehicleCb.TabIndex = 9;
             // 
             // panel7
             // 
@@ -298,18 +303,19 @@
             this.pictureBox7.TabIndex = 2;
             this.pictureBox7.TabStop = false;
             // 
-            // button1
+            // SaveBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(69)))), ((int)(((byte)(156)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(826, 333);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(144, 64);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = false;
+            this.SaveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(69)))), ((int)(((byte)(156)))));
+            this.SaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveBtn.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.SaveBtn.Location = new System.Drawing.Point(826, 333);
+            this.SaveBtn.Name = "SaveBtn";
+            this.SaveBtn.Size = new System.Drawing.Size(144, 64);
+            this.SaveBtn.TabIndex = 19;
+            this.SaveBtn.Text = "Save";
+            this.SaveBtn.UseVisualStyleBackColor = false;
+            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
             // panel3
             // 
@@ -345,27 +351,60 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.BookingDGV);
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.PickUpDate);
             this.panel1.Controls.Add(this.label17);
-            this.panel1.Controls.Add(this.dateTimePicker2);
+            this.panel1.Controls.Add(this.RetDate);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.comboBox4);
+            this.panel1.Controls.Add(this.AmountTb);
+            this.panel1.Controls.Add(this.CustCb);
             this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.EditBtn);
+            this.panel1.Controls.Add(this.ClearBtn);
+            this.panel1.Controls.Add(this.SaveBtn);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.DriverTb);
+            this.panel1.Controls.Add(this.VehicleCb);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Location = new System.Drawing.Point(193, -47);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1535, 1165);
             this.panel1.TabIndex = 36;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // BookingDGV
+            // 
+            this.BookingDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.BookingDGV.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BookingDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.BookingDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.BookingDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.MenuBar;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.BookingDGV.DefaultCellStyle = dataGridViewCellStyle6;
+            this.BookingDGV.Location = new System.Drawing.Point(3, 510);
+            this.BookingDGV.MultiSelect = false;
+            this.BookingDGV.Name = "BookingDGV";
+            this.BookingDGV.RowHeadersWidth = 82;
+            this.BookingDGV.RowTemplate.Height = 45;
+            this.BookingDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.BookingDGV.Size = new System.Drawing.Size(1532, 613);
+            this.BookingDGV.TabIndex = 42;
+            this.BookingDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BookingDGV_CellContentClick);
             // 
             // label10
             // 
@@ -378,15 +417,15 @@
             this.label10.TabIndex = 41;
             this.label10.Text = "Pickup Date";
             // 
-            // dateTimePicker1
+            // PickUpDate
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(43, 358);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(259, 39);
-            this.dateTimePicker1.TabIndex = 40;
+            this.PickUpDate.CalendarFont = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PickUpDate.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PickUpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.PickUpDate.Location = new System.Drawing.Point(43, 358);
+            this.PickUpDate.Name = "PickUpDate";
+            this.PickUpDate.Size = new System.Drawing.Size(259, 39);
+            this.PickUpDate.TabIndex = 40;
             // 
             // label17
             // 
@@ -400,16 +439,16 @@
             this.label17.Text = "Return Date";
             this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
-            // dateTimePicker2
+            // RetDate
             // 
-            this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(474, 358);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(259, 39);
-            this.dateTimePicker2.TabIndex = 38;
-            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
+            this.RetDate.CalendarFont = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RetDate.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RetDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.RetDate.Location = new System.Drawing.Point(474, 358);
+            this.RetDate.Name = "RetDate";
+            this.RetDate.Size = new System.Drawing.Size(259, 39);
+            this.RetDate.TabIndex = 38;
+            this.RetDate.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
             // label12
             // 
@@ -433,40 +472,40 @@
             this.label8.TabIndex = 36;
             this.label8.Text = "Amount";
             // 
-            // textBox1
+            // AmountTb
             // 
-            this.textBox1.Font = new System.Drawing.Font("Arial", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(1075, 206);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(259, 39);
-            this.textBox1.TabIndex = 35;
+            this.AmountTb.Font = new System.Drawing.Font("Arial", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AmountTb.Location = new System.Drawing.Point(1075, 206);
+            this.AmountTb.Name = "AmountTb";
+            this.AmountTb.Size = new System.Drawing.Size(259, 39);
+            this.AmountTb.TabIndex = 35;
             // 
-            // button3
+            // EditBtn
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(69)))), ((int)(((byte)(156)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(1075, 333);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(144, 64);
-            this.button3.TabIndex = 21;
-            this.button3.Text = "Edit";
-            this.button3.UseVisualStyleBackColor = false;
+            this.EditBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(69)))), ((int)(((byte)(156)))));
+            this.EditBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditBtn.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.EditBtn.Location = new System.Drawing.Point(1075, 333);
+            this.EditBtn.Name = "EditBtn";
+            this.EditBtn.Size = new System.Drawing.Size(144, 64);
+            this.EditBtn.TabIndex = 21;
+            this.EditBtn.Text = "Edit";
+            this.EditBtn.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // ClearBtn
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(69)))), ((int)(((byte)(156)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(1336, 333);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(144, 64);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "Fire";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.ClearBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(69)))), ((int)(((byte)(156)))));
+            this.ClearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ClearBtn.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClearBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClearBtn.Location = new System.Drawing.Point(1336, 333);
+            this.ClearBtn.Name = "ClearBtn";
+            this.ClearBtn.Size = new System.Drawing.Size(144, 64);
+            this.ClearBtn.TabIndex = 20;
+            this.ClearBtn.Text = "Delete";
+            this.ClearBtn.UseVisualStyleBackColor = false;
+            this.ClearBtn.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -537,6 +576,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BookingDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -554,34 +594,35 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox CustCb;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox DriverTb;
+        private System.Windows.Forms.ComboBox VehicleCb;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button SaveBtn;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button EditBtn;
+        private System.Windows.Forms.Button ClearBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox AmountTb;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker RetDate;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker PickUpDate;
+        private System.Windows.Forms.DataGridView BookingDGV;
     }
 }
