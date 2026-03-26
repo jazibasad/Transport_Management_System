@@ -17,7 +17,7 @@ namespace Transport_Management_System
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Users());
+            Application.Run(new Drivers());
         }
 
         // Imports the Windows library to handle High DPI scaling

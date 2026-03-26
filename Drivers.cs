@@ -72,5 +72,10 @@ namespace Transport_Management_System
         {
 
         }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

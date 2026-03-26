@@ -29,22 +29,24 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Drivers));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.EditBtn = new System.Windows.Forms.Button();
+            this.DeleteBtn = new System.Windows.Forms.Button();
+            this.SaveBtn = new System.Windows.Forms.Button();
+            this.GenCb = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.JoinDate = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.DOB = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.DrAdd = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.PhoneTb = new System.Windows.Forms.TextBox();
+            this.VehicleCb = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.DrNameTb = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -67,6 +69,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.DriverDGV = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -82,26 +85,28 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DriverDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.DriverDGV);
+            this.panel1.Controls.Add(this.EditBtn);
+            this.panel1.Controls.Add(this.DeleteBtn);
+            this.panel1.Controls.Add(this.SaveBtn);
+            this.panel1.Controls.Add(this.GenCb);
             this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.dateTimePicker2);
+            this.panel1.Controls.Add(this.JoinDate);
             this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.DOB);
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.DrAdd);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.PhoneTb);
+            this.panel1.Controls.Add(this.VehicleCb);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.DrNameTb);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Location = new System.Drawing.Point(233, 30);
             this.panel1.Name = "panel1";
@@ -109,57 +114,57 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // button3
+            // EditBtn
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(69)))), ((int)(((byte)(156)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(1002, 397);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(144, 64);
-            this.button3.TabIndex = 21;
-            this.button3.Text = "Edit";
-            this.button3.UseVisualStyleBackColor = false;
+            this.EditBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(69)))), ((int)(((byte)(156)))));
+            this.EditBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditBtn.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.EditBtn.Location = new System.Drawing.Point(1002, 397);
+            this.EditBtn.Name = "EditBtn";
+            this.EditBtn.Size = new System.Drawing.Size(144, 64);
+            this.EditBtn.TabIndex = 21;
+            this.EditBtn.Text = "Edit";
+            this.EditBtn.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // DeleteBtn
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(69)))), ((int)(((byte)(156)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(1263, 397);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(144, 64);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "Fire";
-            this.button2.UseVisualStyleBackColor = false;
+            this.DeleteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(69)))), ((int)(((byte)(156)))));
+            this.DeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteBtn.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.DeleteBtn.Location = new System.Drawing.Point(1263, 397);
+            this.DeleteBtn.Name = "DeleteBtn";
+            this.DeleteBtn.Size = new System.Drawing.Size(144, 64);
+            this.DeleteBtn.TabIndex = 20;
+            this.DeleteBtn.Text = "Delete";
+            this.DeleteBtn.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // SaveBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(69)))), ((int)(((byte)(156)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(753, 397);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(144, 64);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = false;
+            this.SaveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(69)))), ((int)(((byte)(156)))));
+            this.SaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveBtn.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.SaveBtn.Location = new System.Drawing.Point(753, 397);
+            this.SaveBtn.Name = "SaveBtn";
+            this.SaveBtn.Size = new System.Drawing.Size(144, 64);
+            this.SaveBtn.TabIndex = 19;
+            this.SaveBtn.Text = "Save";
+            this.SaveBtn.UseVisualStyleBackColor = false;
             // 
-            // comboBox2
+            // GenCb
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.GenCb.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GenCb.FormattingEnabled = true;
+            this.GenCb.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.comboBox2.Location = new System.Drawing.Point(384, 293);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(259, 40);
-            this.comboBox2.TabIndex = 18;
-            this.comboBox2.Text = "Gender";
+            this.GenCb.Location = new System.Drawing.Point(384, 293);
+            this.GenCb.Name = "GenCb";
+            this.GenCb.Size = new System.Drawing.Size(259, 40);
+            this.GenCb.TabIndex = 18;
+            this.GenCb.Text = "Gender";
             // 
             // label12
             // 
@@ -173,16 +178,16 @@
             this.label12.Text = "Join Date";
             this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
-            // dateTimePicker2
+            // JoinDate
             // 
-            this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(372, 423);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(259, 39);
-            this.dateTimePicker2.TabIndex = 16;
-            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
+            this.JoinDate.CalendarFont = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.JoinDate.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.JoinDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.JoinDate.Location = new System.Drawing.Point(372, 423);
+            this.JoinDate.Name = "JoinDate";
+            this.JoinDate.Size = new System.Drawing.Size(259, 39);
+            this.JoinDate.TabIndex = 16;
+            this.JoinDate.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
             // label11
             // 
@@ -196,15 +201,15 @@
             this.label11.Text = "Driver DOB";
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
-            // dateTimePicker1
+            // DOB
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(43, 423);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(259, 39);
-            this.dateTimePicker1.TabIndex = 14;
+            this.DOB.CalendarFont = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DOB.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DOB.Location = new System.Drawing.Point(43, 423);
+            this.DOB.Name = "DOB";
+            this.DOB.Size = new System.Drawing.Size(259, 39);
+            this.DOB.TabIndex = 14;
             // 
             // label10
             // 
@@ -217,14 +222,14 @@
             this.label10.TabIndex = 13;
             this.label10.Text = "Driver Address";
             // 
-            // textBox3
+            // DrAdd
             // 
-            this.textBox3.Font = new System.Drawing.Font("Arial", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(1109, 219);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(400, 114);
-            this.textBox3.TabIndex = 12;
+            this.DrAdd.Font = new System.Drawing.Font("Arial", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DrAdd.Location = new System.Drawing.Point(1109, 219);
+            this.DrAdd.Multiline = true;
+            this.DrAdd.Name = "DrAdd";
+            this.DrAdd.Size = new System.Drawing.Size(400, 114);
+            this.DrAdd.TabIndex = 12;
             // 
             // label9
             // 
@@ -237,23 +242,23 @@
             this.label9.TabIndex = 11;
             this.label9.Text = "Driver Phone";
             // 
-            // textBox2
+            // PhoneTb
             // 
-            this.textBox2.Font = new System.Drawing.Font("Arial", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(714, 220);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(259, 39);
-            this.textBox2.TabIndex = 10;
+            this.PhoneTb.Font = new System.Drawing.Font("Arial", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PhoneTb.Location = new System.Drawing.Point(714, 220);
+            this.PhoneTb.Name = "PhoneTb";
+            this.PhoneTb.Size = new System.Drawing.Size(259, 39);
+            this.PhoneTb.TabIndex = 10;
             // 
-            // comboBox1
+            // VehicleCb
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(384, 219);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(259, 40);
-            this.comboBox1.TabIndex = 9;
-            this.comboBox1.Text = "Driver Name";
+            this.VehicleCb.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VehicleCb.FormattingEnabled = true;
+            this.VehicleCb.Location = new System.Drawing.Point(384, 219);
+            this.VehicleCb.Name = "VehicleCb";
+            this.VehicleCb.Size = new System.Drawing.Size(259, 40);
+            this.VehicleCb.TabIndex = 9;
+            this.VehicleCb.Text = "Vehicle";
             // 
             // label8
             // 
@@ -267,13 +272,13 @@
             this.label8.Text = "Driver Name";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
-            // textBox1
+            // DrNameTb
             // 
-            this.textBox1.Font = new System.Drawing.Font("Arial", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(43, 220);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(259, 39);
-            this.textBox1.TabIndex = 5;
+            this.DrNameTb.Font = new System.Drawing.Font("Arial", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DrNameTb.Location = new System.Drawing.Point(43, 220);
+            this.DrNameTb.Name = "DrNameTb";
+            this.DrNameTb.Size = new System.Drawing.Size(259, 39);
+            this.DrNameTb.TabIndex = 5;
             // 
             // label7
             // 
@@ -498,6 +503,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // panel8
             // 
@@ -507,6 +513,37 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(80, 72);
             this.panel8.TabIndex = 25;
+            // 
+            // DriverDGV
+            // 
+            this.DriverDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DriverDGV.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.DriverDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DriverDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.DriverDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.MenuBar;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DriverDGV.DefaultCellStyle = dataGridViewCellStyle2;
+            this.DriverDGV.Location = new System.Drawing.Point(0, 549);
+            this.DriverDGV.MultiSelect = false;
+            this.DriverDGV.Name = "DriverDGV";
+            this.DriverDGV.RowHeadersWidth = 82;
+            this.DriverDGV.RowTemplate.Height = 45;
+            this.DriverDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DriverDGV.Size = new System.Drawing.Size(1532, 616);
+            this.DriverDGV.TabIndex = 37;
             // 
             // Drivers
             // 
@@ -550,6 +587,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DriverDGV)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -576,24 +614,25 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox DrNameTb;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox VehicleCb;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox PhoneTb;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox DrAdd;
+        private System.Windows.Forms.DateTimePicker DOB;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DateTimePicker JoinDate;
+        private System.Windows.Forms.ComboBox GenCb;
+        private System.Windows.Forms.Button SaveBtn;
+        private System.Windows.Forms.Button EditBtn;
+        private System.Windows.Forms.Button DeleteBtn;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.DataGridView DriverDGV;
     }
 }
 
