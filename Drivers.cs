@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -26,6 +27,8 @@ namespace Transport_Management_System
 
             // 3. Optional: Uncomment the line below to make the window open maximized
             // this.WindowState = FormWindowState.Maximized;
+
+            GetCars();
         }
 
         // Keep your existing event handlers below
@@ -76,6 +79,29 @@ namespace Transport_Management_System
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\TransportDb.mdf;Integrated Security=True;Connect Timeout=30");
+
+        private void GetCars()
+        {
+            Con.Open(); 
+            SqlCommand cmd = new SqlCommand("select * from VehicleTbl", Con);
+            SqlDataReader rdr;
+            rdr =  cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Vlp", typeof(String));
+            dt.Load(rdr);
+            VehicleCb.ValueMember = "Vlp";
+            VehicleCb.DataSource = dt;
+
+            Con.Close();    
+
+        }
+
+        private void SaveBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
