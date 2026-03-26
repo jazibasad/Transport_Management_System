@@ -136,19 +136,23 @@ namespace Transport_Management_System
         }
 
         private void CustomerDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+        { 
             CustNameTb.Text = CustomerDGV.SelectedRows[0].Cells[0].Value.ToString();
             CustAddTb.Text = CustomerDGV.SelectedRows[0].Cells[1].Value.ToString();
             CustPhoneTb.Text = CustomerDGV.SelectedRows[0].Cells[2].Value.ToString();
             CustGenCb.SelectedItem = CustomerDGV.SelectedRows[0].Cells[3].Value.ToString();
-            if(CustNameTb.Text == "")
+
+            if (string.IsNullOrWhiteSpace(CustNameTb.Text))
             {
                 Key = 0;
             }
-            else
+            else if (CustomerDGV.SelectedRows.Count > 0)
             {
-                Key = Convert.ToInt32(CustomerDGV.SelectedRows[0].Cells[4].Value.ToString());
+                int.TryParse(CustomerDGV.SelectedRows[0].Cells[0].Value.ToString(), out Key);
             }
+
+            
+
         }
     }
 }   
