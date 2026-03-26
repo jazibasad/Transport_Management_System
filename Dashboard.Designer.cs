@@ -37,7 +37,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.VNumLbl = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -57,23 +57,23 @@
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.CNumLbl = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.UNameLbl = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.IncNumLbl = new System.Windows.Forms.Label();
             this.panel19 = new System.Windows.Forms.Panel();
             this.panel20 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.BookNumLbl = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.DNumLbl = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -182,16 +182,16 @@
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
-            // label12
+            // VNumLbl
             // 
-            this.label12.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label12.Location = new System.Drawing.Point(168, 87);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(118, 32);
-            this.label12.TabIndex = 37;
-            this.label12.Text = "Num";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
+            this.VNumLbl.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VNumLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.VNumLbl.Location = new System.Drawing.Point(168, 87);
+            this.VNumLbl.Name = "VNumLbl";
+            this.VNumLbl.Size = new System.Drawing.Size(118, 32);
+            this.VNumLbl.TabIndex = 37;
+            this.VNumLbl.Text = "Num";
+            this.VNumLbl.Click += new System.EventHandler(this.label12_Click);
             // 
             // panel4
             // 
@@ -382,7 +382,7 @@
             // 
             this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(69)))), ((int)(((byte)(156)))));
             this.panel14.Controls.Add(this.label10);
-            this.panel14.Controls.Add(this.label11);
+            this.panel14.Controls.Add(this.CNumLbl);
             this.panel14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel14.Location = new System.Drawing.Point(952, 582);
             this.panel14.Name = "panel14";
@@ -399,15 +399,15 @@
             this.label10.TabIndex = 25;
             this.label10.Text = "Customers";
             // 
-            // label11
+            // CNumLbl
             // 
-            this.label11.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Location = new System.Drawing.Point(175, 87);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(118, 32);
-            this.label11.TabIndex = 37;
-            this.label11.Text = "Num";
+            this.CNumLbl.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CNumLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.CNumLbl.Location = new System.Drawing.Point(175, 87);
+            this.CNumLbl.Name = "CNumLbl";
+            this.CNumLbl.Size = new System.Drawing.Size(118, 32);
+            this.CNumLbl.TabIndex = 37;
+            this.CNumLbl.Text = "Num";
             // 
             // panel15
             // 
@@ -421,7 +421,7 @@
             // 
             this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(69)))), ((int)(((byte)(156)))));
             this.panel16.Controls.Add(this.label15);
-            this.panel16.Controls.Add(this.label16);
+            this.panel16.Controls.Add(this.UNameLbl);
             this.panel16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel16.Location = new System.Drawing.Point(146, 582);
             this.panel16.Name = "panel16";
@@ -438,15 +438,15 @@
             this.label15.TabIndex = 25;
             this.label15.Text = "Users";
             // 
-            // label16
+            // UNameLbl
             // 
-            this.label16.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label16.Location = new System.Drawing.Point(168, 87);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(118, 32);
-            this.label16.TabIndex = 37;
-            this.label16.Text = "Num";
+            this.UNameLbl.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UNameLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.UNameLbl.Location = new System.Drawing.Point(168, 87);
+            this.UNameLbl.Name = "UNameLbl";
+            this.UNameLbl.Size = new System.Drawing.Size(118, 32);
+            this.UNameLbl.TabIndex = 37;
+            this.UNameLbl.Text = "Num";
             // 
             // panel17
             // 
@@ -460,7 +460,7 @@
             // 
             this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(69)))), ((int)(((byte)(156)))));
             this.panel18.Controls.Add(this.label17);
-            this.panel18.Controls.Add(this.label18);
+            this.panel18.Controls.Add(this.IncNumLbl);
             this.panel18.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel18.Location = new System.Drawing.Point(952, 898);
             this.panel18.Name = "panel18";
@@ -477,15 +477,15 @@
             this.label17.TabIndex = 25;
             this.label17.Text = "Income";
             // 
-            // label18
+            // IncNumLbl
             // 
-            this.label18.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label18.Location = new System.Drawing.Point(175, 87);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(118, 32);
-            this.label18.TabIndex = 37;
-            this.label18.Text = "Num";
+            this.IncNumLbl.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IncNumLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.IncNumLbl.Location = new System.Drawing.Point(175, 87);
+            this.IncNumLbl.Name = "IncNumLbl";
+            this.IncNumLbl.Size = new System.Drawing.Size(118, 32);
+            this.IncNumLbl.TabIndex = 37;
+            this.IncNumLbl.Text = "Num";
             // 
             // panel19
             // 
@@ -499,7 +499,7 @@
             // 
             this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(69)))), ((int)(((byte)(156)))));
             this.panel20.Controls.Add(this.label19);
-            this.panel20.Controls.Add(this.label20);
+            this.panel20.Controls.Add(this.BookNumLbl);
             this.panel20.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel20.Location = new System.Drawing.Point(146, 898);
             this.panel20.Name = "panel20";
@@ -516,15 +516,15 @@
             this.label19.TabIndex = 25;
             this.label19.Text = "Bookings";
             // 
-            // label20
+            // BookNumLbl
             // 
-            this.label20.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label20.Location = new System.Drawing.Point(168, 87);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(118, 32);
-            this.label20.TabIndex = 37;
-            this.label20.Text = "Num";
+            this.BookNumLbl.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BookNumLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BookNumLbl.Location = new System.Drawing.Point(168, 87);
+            this.BookNumLbl.Name = "BookNumLbl";
+            this.BookNumLbl.Size = new System.Drawing.Size(118, 32);
+            this.BookNumLbl.TabIndex = 37;
+            this.BookNumLbl.Text = "Num";
             // 
             // panel11
             // 
@@ -538,7 +538,7 @@
             // 
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(69)))), ((int)(((byte)(156)))));
             this.panel12.Controls.Add(this.label8);
-            this.panel12.Controls.Add(this.label9);
+            this.panel12.Controls.Add(this.DNumLbl);
             this.panel12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel12.Location = new System.Drawing.Point(952, 260);
             this.panel12.Name = "panel12";
@@ -555,16 +555,16 @@
             this.label8.TabIndex = 25;
             this.label8.Text = "Driver";
             // 
-            // label9
+            // DNumLbl
             // 
-            this.label9.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(175, 87);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(118, 32);
-            this.label9.TabIndex = 37;
-            this.label9.Text = "Num";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
+            this.DNumLbl.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DNumLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.DNumLbl.Location = new System.Drawing.Point(175, 87);
+            this.DNumLbl.Name = "DNumLbl";
+            this.DNumLbl.Size = new System.Drawing.Size(118, 32);
+            this.DNumLbl.TabIndex = 37;
+            this.DNumLbl.Text = "Num";
+            this.DNumLbl.Click += new System.EventHandler(this.label9_Click);
             // 
             // panel10
             // 
@@ -578,7 +578,7 @@
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(69)))), ((int)(((byte)(156)))));
             this.panel9.Controls.Add(this.label14);
-            this.panel9.Controls.Add(this.label12);
+            this.panel9.Controls.Add(this.VNumLbl);
             this.panel9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel9.Location = new System.Drawing.Point(146, 260);
             this.panel9.Name = "panel9";
@@ -604,6 +604,7 @@
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
+            this.Load += new System.EventHandler(this.Dashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -645,7 +646,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label VNumLbl;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -667,23 +668,23 @@
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label DNumLbl;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label CNumLbl;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label UNameLbl;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label IncNumLbl;
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label BookNumLbl;
         private System.Windows.Forms.Panel panel1;
     }
 }
