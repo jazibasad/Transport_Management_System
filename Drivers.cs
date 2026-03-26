@@ -29,7 +29,9 @@ namespace Transport_Management_System
             // this.WindowState = FormWindowState.Maximized;
 
             GetCars();
+            ShowDrivers();
         }
+        int Key = 0;
 
         // Keep your existing event handlers below
         private void pictureBox1_Click(object sender, EventArgs e) { }
@@ -167,6 +169,27 @@ namespace Transport_Management_System
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void DriverDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DrNameTb.Text = DriverDGV.SelectedRows[0].Cells[1].Value.ToString();
+            VehicleCb.SelectedItem = DriverDGV.SelectedRows[0].Cells[2].Value.ToString();
+            PhoneTb.Text = DriverDGV.SelectedRows[0].Cells[3].Value.ToString();
+            DrAdd.Text = DriverDGV.SelectedRows[0].Cells[4].Value.ToString();
+            DOB.Text = DriverDGV.SelectedRows[0].Cells[5].Value.ToString();
+            JoinDate.Text = DriverDGV.SelectedRows[0].Cells[6].Value.ToString();
+            GenCb.Text = DriverDGV.SelectedRows[0].Cells[7].Value.ToString();
+            RatingCb.Text = DriverDGV.SelectedRows[0].Cells[8].Value.ToString();
+
+            if (string.IsNullOrWhiteSpace(DrNameTb.Text))
+            {
+                Key = 0;
+            }
+            else if (DriverDGV.SelectedRows.Count > 0)
+            {
+                int.TryParse(DriverDGV.SelectedRows[0].Cells[0].Value.ToString(), out Key);
+            }
         }
     }
 }
