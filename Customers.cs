@@ -137,10 +137,10 @@ namespace Transport_Management_System
 
         private void CustomerDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         { 
-            CustNameTb.Text = CustomerDGV.SelectedRows[0].Cells[0].Value.ToString();
-            CustAddTb.Text = CustomerDGV.SelectedRows[0].Cells[1].Value.ToString();
-            CustPhoneTb.Text = CustomerDGV.SelectedRows[0].Cells[2].Value.ToString();
-            CustGenCb.SelectedItem = CustomerDGV.SelectedRows[0].Cells[3].Value.ToString();
+            CustNameTb.Text = CustomerDGV.SelectedRows[0].Cells[1].Value.ToString();
+            CustAddTb.Text = CustomerDGV.SelectedRows[0].Cells[2].Value.ToString();
+            CustPhoneTb.Text = CustomerDGV.SelectedRows[0].Cells[3].Value.ToString();
+            CustGenCb.SelectedItem = CustomerDGV.SelectedRows[0].Cells[4].Value.ToString();
 
             if (string.IsNullOrWhiteSpace(CustNameTb.Text))
             {
@@ -152,6 +152,42 @@ namespace Transport_Management_System
             }
 
             
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (CustNameTb.Text == "" || CustGenCb.SelectedIndex == -1 || CustAddTb.Text == "" || CustPhoneTb.Text == "")
+
+            {
+                MessageBox.Show("Missing Information");
+                return;
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    SqlCommand cmd = new SqlCommand("update CustomerTbl set CustName=@CN, CustAdd=@CA, CustPhone=@CP, CustGen=@CG where  CustId=@CKey", Con);
+                    cmd.Parameters.AddWithValue("@CN", CustNameTb.Text);
+                    cmd.Parameters.AddWithValue("@CA", CustAddTb.Text);
+                    cmd.Parameters.AddWithValue("@CP", CustPhoneTb.Text);
+                    cmd.Parameters.AddWithValue("@CG", CustGenCb.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("@CKey", Key);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Customer Updated");
+
+                    Con.Close();
+                    ShowCustomers();
+                    Clear();
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+
+
+                }
+            }
 
         }
     }
