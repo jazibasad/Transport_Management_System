@@ -138,7 +138,7 @@ namespace Transport_Management_System
                 try
                 {
                     Con.Open();
-                    SqlCommand cmd = new SqlCommand("insert into DriverTbl (DrName,DrVehicle,Drphone,DrAdd,DrDOB,DrJoinDate,DrGen,DrRating) values (@DRN, @DrV, @DrP, @DrG,@DrR )", Con);
+                    SqlCommand cmd = new SqlCommand("insert into DriverTbl (DrName,DrVehicle,Drphone,DrAdd,DrDOB,DrJoinDate,DrGen,DrRating) values (@DRN, @DrV, @DrP,@DRA,@DRD,@DRJ, @DrG,@DrR )", Con);
                     cmd.Parameters.AddWithValue("@DRN", DrNameTb.Text);
                     cmd.Parameters.AddWithValue("@DRV", VehicleCb.SelectedValue.ToString());
                     cmd.Parameters.AddWithValue("@DRP", PhoneTb.Text);
