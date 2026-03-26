@@ -148,5 +148,39 @@ namespace Transport_Management_System
                 int.TryParse(UserDGV.SelectedRows[0].Cells[0].Value.ToString(), out Key);
             }
         }
+
+        private void EditBtn_Click(object sender, EventArgs e)
+        {
+            if (UnameTb.Text == ""  || PhoneTb.Text == "" || PasswordTb.Text == "")
+
+            {
+                MessageBox.Show("Missing Information");
+                return;
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    SqlCommand cmd = new SqlCommand("update UserTbl set UName=@UN, Uphone=@UP, Upassword=@UP where  UId=@UKey", Con);
+                    cmd.Parameters.AddWithValue("@UN", UnameTb.Text);
+                    cmd.Parameters.AddWithValue("@UP", PhoneTb.Text);
+                    cmd.Parameters.AddWithValue("@UPa", PasswordTb.Text);
+                    cmd.Parameters.AddWithValue("@UKey", Key);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Customer Updated");
+
+                    Con.Close();
+                    ShowUsers();
+                    Clear();
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+
+
+                }
+            }
+        }
     }
 }
