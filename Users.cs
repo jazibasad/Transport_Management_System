@@ -89,6 +89,7 @@ namespace Transport_Management_System
             UnameTb.Text = "";
             PhoneTb.Text = "";
             PasswordTb.Text = "";
+            Key = 0;
 
         }
 
@@ -122,7 +123,7 @@ namespace Transport_Management_System
                     SqlCommand cmd = new SqlCommand("insert into UserTbl (UName,Uphone,Upassword ) values (@UN, @UP, @UPa)", Con);
                     cmd.Parameters.AddWithValue("@UN", UnameTb.Text);
                     cmd.Parameters.AddWithValue("@UP", PhoneTb.Text);
-                    cmd.Parameters.AddWithValue("@Upa", PasswordTb.Text);
+                    cmd.Parameters.AddWithValue("@UPa", PasswordTb.Text);
                     
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("User Recorded");
@@ -171,13 +172,13 @@ namespace Transport_Management_System
                  try
                  {
                      Con.Open();
-                     SqlCommand cmd = new SqlCommand("update UserTbl set UName=@UN, Uphone=@UP, Upassword=@UP where  UId=@UKey", Con);
+                     SqlCommand cmd = new SqlCommand("update UserTbl set UName=@UN, Uphone=@UP, Upassword=@UPa where  UId=@UKey", Con);
                      cmd.Parameters.AddWithValue("@UN", UnameTb.Text);
                      cmd.Parameters.AddWithValue("@UP", PhoneTb.Text);
                      cmd.Parameters.AddWithValue("@UPa", PasswordTb.Text);
                      cmd.Parameters.AddWithValue("@UKey", Key);
                      cmd.ExecuteNonQuery();
-                     MessageBox.Show("Customer Updated");
+                     MessageBox.Show("User Updated");
 
                      Con.Close();
                      ShowUsers();
@@ -194,6 +195,26 @@ namespace Transport_Management_System
 
         }
 
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            Dashboard Obj = new Dashboard();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            Login Obj = new Login();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Users Obj = new Users();
+            Obj.Show();
+            this.Hide();
+        }
     }
     }
 

@@ -221,6 +221,9 @@ namespace Transport_Management_System
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+            Customers Obj = new Customers();
+            Obj.Show();
+            this.Hide();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -237,6 +240,9 @@ namespace Transport_Management_System
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
+            Login Obj = new Login();
+            Obj.Show();
+            this.Hide();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -249,6 +255,9 @@ namespace Transport_Management_System
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
+            Bookings Obj = new Bookings();
+            Obj.Show();
+            this.Hide();
         }
 
         private void panel6_Paint(object sender, PaintEventArgs e)
@@ -261,6 +270,9 @@ namespace Transport_Management_System
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
+            Dashboard Obj = new Dashboard();
+            Obj.Show();
+            this.Hide();
         }
 
         private void panel5_Paint(object sender, PaintEventArgs e)
@@ -285,6 +297,9 @@ namespace Transport_Management_System
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            Drivers Obj = new Drivers();
+            Obj.Show();
+            this.Hide();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -377,6 +392,11 @@ namespace Transport_Management_System
         private void Button2_Click(object sender, EventArgs e)
         {
             DeleteBtn_Click(sender, e); 
+        }
+
+        private void Vehicles_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace Transport_Management_System
 {
     public partial class Dashboard : Form
@@ -46,7 +45,7 @@ namespace Transport_Management_System
         }
 
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\TransportDb.mdf;Integrated Security=True;Connect Timeout=30");
-         private void CountVehicles()
+        private void CountVehicles()
         {
             Con.Open();
             string Query = "select count(*) from VehicleTbl";
@@ -122,7 +121,7 @@ namespace Transport_Management_System
 
         }
 
-        private void BestCust()
+        /*private void BestCust()
         {
             Con.Open();
             string InnerQuery = "select max(Amount) from  BookingTbl";
@@ -135,23 +134,92 @@ namespace Transport_Management_System
             sda.Fill(dt);
             BestCustLbl.Text = dt.Rows[0][0].ToString();
             Con.Close();
+        }*/
+
+        private void BestCust()
+        {
+            try
+            {
+                if (Con.State == ConnectionState.Closed) Con.Open();
+
+                // Get the Customer Name for the highest amount in one single step
+                string Query = "SELECT TOP 1 CustName FROM BookingTbl ORDER BY Amount DESC";
+
+                SqlCommand cmd = new SqlCommand(Query, Con);
+                object result = cmd.ExecuteScalar();
+
+                // Check if result is null (table is empty)
+                if (result != null && result != DBNull.Value)
+                {
+                    BestCustLbl.Text = result.ToString();
+                }
+                else
+                {
+                    BestCustLbl.Text = "No Bookings Yet";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error finding best customer: " + ex.Message);
+            }
+            finally
+            {
+                Con.Close();
+            }
         }
+
+        /* private void BestDriver()
+         {
+             Con.Open();
+             string Query = "SELECT  Driver, COUNT(*) from BookingTbl GROUP BY Driver ORDER BY COUNT(Driver) DESC";
+             SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
+             DataTable dt = new DataTable();
+             sda.Fill(dt);
+             BestDriverLbl.Text = dt.Rows[0][0].ToString();
+             Con.Close();
+         } */
 
         private void BestDriver()
         {
-            Con.Open();
-            string Query = "SELECT  Driver, COUNT(*) from BookingTbl GROUP BY Driver ORDER BY COUNT(Driver) DESC";
-            SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            BestDriverLbl.Text = dt.Rows[0][0].ToString();
-            Con.Close();
+            try
+            {
+                // 1. Safety check for the connection state
+                if (Con.State == ConnectionState.Closed) Con.Open();
+
+                // 2. SQL Query to get ONLY the top driver's name
+                string Query = "SELECT TOP 1 Driver FROM BookingTbl GROUP BY Driver ORDER BY COUNT(Driver) DESC";
+
+                SqlCommand cmd = new SqlCommand(Query, Con);
+
+                // 3. ExecuteScalar returns the first column of the first row
+                object result = cmd.ExecuteScalar();
+
+                // 4. Null check to prevent crashes on empty tables
+                if (result != null && result != DBNull.Value)
+                {
+                    BestDriverLbl.Text = result.ToString();
+                }
+                else
+                {
+                    BestDriverLbl.Text = "No Drivers Assigned";
+                }
+            }
+            catch (Exception ex)
+            {
+                // 5. Catch any SQL or Runtime errors
+                MessageBox.Show("Error calculating best driver: " + ex.Message);
+            }
+            finally
+            {
+                // 6. Ensure connection is ALWAYS closed
+                Con.Close();
+            }
         }
 
 
-      
 
-        
+
+
 
 
         private void Dashboard_Load(object sender, EventArgs e)

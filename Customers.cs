@@ -231,5 +231,12 @@ namespace Transport_Management_System
             this.Hide();
             Obj.Show();
         }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            Login Obj = new Login();
+            Obj.Show();
+            this.Hide();
+        }
     }
 }   
