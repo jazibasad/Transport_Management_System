@@ -114,7 +114,7 @@
             this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Location = new System.Drawing.Point(-12, 280);
+            this.panel3.Location = new System.Drawing.Point(12, 200);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(150, 138);
             this.panel3.TabIndex = 48;
@@ -167,7 +167,7 @@
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Location = new System.Drawing.Point(-12, 114);
+            this.panel2.Location = new System.Drawing.Point(12, 34);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(150, 138);
             this.panel2.TabIndex = 47;
@@ -198,7 +198,7 @@
             this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.pictureBox4);
-            this.panel4.Location = new System.Drawing.Point(-12, 448);
+            this.panel4.Location = new System.Drawing.Point(12, 368);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(150, 138);
             this.panel4.TabIndex = 49;
@@ -229,7 +229,7 @@
             this.panel5.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.pictureBox5);
-            this.panel5.Location = new System.Drawing.Point(-12, 617);
+            this.panel5.Location = new System.Drawing.Point(12, 537);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(150, 138);
             this.panel5.TabIndex = 51;
@@ -290,7 +290,7 @@
             this.panel6.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel6.Controls.Add(this.label5);
             this.panel6.Controls.Add(this.pictureBox6);
-            this.panel6.Location = new System.Drawing.Point(-12, 788);
+            this.panel6.Location = new System.Drawing.Point(12, 708);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(150, 138);
             this.panel6.TabIndex = 50;
@@ -321,7 +321,7 @@
             this.panel7.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel7.Controls.Add(this.label6);
             this.panel7.Controls.Add(this.pictureBox7);
-            this.panel7.Location = new System.Drawing.Point(-12, 980);
+            this.panel7.Location = new System.Drawing.Point(12, 900);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(150, 138);
             this.panel7.TabIndex = 52;
