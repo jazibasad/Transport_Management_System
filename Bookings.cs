@@ -18,6 +18,7 @@ namespace Transport_Management_System
             InitializeComponent();
             GetCustomers();
             ShowBookings();
+            GetCars();
         }
 
 
@@ -36,6 +37,23 @@ namespace Transport_Management_System
             CustCb.DataSource = dt;
             Con.Close();
         }
+
+
+        private void GetCars()
+        {
+            Con.Open();
+            SqlCommand cmd = new SqlCommand("select * from VehicleTbl", Con);
+            SqlDataReader rdr;
+            rdr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Vlp", typeof(String));
+            dt.Load(rdr);
+            VehicleCb.ValueMember = "Vlp";
+            VehicleCb.DataSource = dt;
+            Con.Close();
+        }
+
+
 
 
         private void Clear()
