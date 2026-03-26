@@ -97,5 +97,58 @@ namespace Transport_Management_System
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        int Key=0;
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (Key == 0)
+
+            {
+                MessageBox.Show("Select a Customer");
+                return;
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    SqlCommand cmd = new SqlCommand("delete from CustomerTbl where CustId = @CustKey ", Con);
+                    cmd.Parameters.AddWithValue("@CustKey", Key);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Customer Deleted");
+
+                    Con.Close();
+                    ShowCustomers();
+                    Clear();
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+
+
+                }
+            }
+        }
+
+        private void CustomerDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            CustNameTb.Text = CustomerDGV.SelectedRows[0].Cells[0].Value.ToString();
+            CustAddTb.Text = CustomerDGV.SelectedRows[0].Cells[1].Value.ToString();
+            CustPhoneTb.Text = CustomerDGV.SelectedRows[0].Cells[2].Value.ToString();
+            CustGenCb.SelectedItem = CustomerDGV.SelectedRows[0].Cells[3].Value.ToString();
+            if(CustNameTb.Text == "")
+            {
+                Key = 0;
+            }
+            else
+            {
+                Key = Convert.ToInt32(CustomerDGV.SelectedRows[0].Cells[4].Value.ToString());
+            }
+        }
     }
-}
+}   
