@@ -65,11 +65,11 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.AmountTb = new System.Windows.Forms.TextBox();
-            this.EditBtn = new System.Windows.Forms.Button();
             this.ClearBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.UnameLbl = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel6.SuspendLayout();
@@ -93,7 +93,7 @@
             this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.pictureBox4);
-            this.panel4.Location = new System.Drawing.Point(-12, 448);
+            this.panel4.Location = new System.Drawing.Point(12, 411);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(150, 138);
             this.panel4.TabIndex = 39;
@@ -125,7 +125,7 @@
             this.panel6.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel6.Controls.Add(this.label5);
             this.panel6.Controls.Add(this.pictureBox6);
-            this.panel6.Location = new System.Drawing.Point(-12, 788);
+            this.panel6.Location = new System.Drawing.Point(12, 751);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(150, 138);
             this.panel6.TabIndex = 40;
@@ -156,7 +156,7 @@
             this.panel5.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.pictureBox5);
-            this.panel5.Location = new System.Drawing.Point(-12, 617);
+            this.panel5.Location = new System.Drawing.Point(12, 580);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(150, 138);
             this.panel5.TabIndex = 41;
@@ -279,7 +279,7 @@
             this.panel7.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel7.Controls.Add(this.label6);
             this.panel7.Controls.Add(this.pictureBox7);
-            this.panel7.Location = new System.Drawing.Point(-12, 980);
+            this.panel7.Location = new System.Drawing.Point(12, 943);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(150, 138);
             this.panel7.TabIndex = 42;
@@ -311,11 +311,11 @@
             this.SaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaveBtn.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaveBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.SaveBtn.Location = new System.Drawing.Point(826, 333);
+            this.SaveBtn.Location = new System.Drawing.Point(939, 333);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(144, 64);
             this.SaveBtn.TabIndex = 19;
-            this.SaveBtn.Text = "Save";
+            this.SaveBtn.Text = "Book";
             this.SaveBtn.UseVisualStyleBackColor = false;
             this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
@@ -324,7 +324,7 @@
             this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Location = new System.Drawing.Point(-12, 280);
+            this.panel3.Location = new System.Drawing.Point(12, 243);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(150, 138);
             this.panel3.TabIndex = 38;
@@ -354,6 +354,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.UnameLbl);
             this.panel1.Controls.Add(this.BookingDGV);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.PickUpDate);
@@ -364,7 +365,6 @@
             this.panel1.Controls.Add(this.AmountTb);
             this.panel1.Controls.Add(this.CustCb);
             this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.EditBtn);
             this.panel1.Controls.Add(this.ClearBtn);
             this.panel1.Controls.Add(this.SaveBtn);
             this.panel1.Controls.Add(this.label9);
@@ -483,26 +483,13 @@
             this.AmountTb.Size = new System.Drawing.Size(259, 39);
             this.AmountTb.TabIndex = 35;
             // 
-            // EditBtn
-            // 
-            this.EditBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(69)))), ((int)(((byte)(156)))));
-            this.EditBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditBtn.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EditBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.EditBtn.Location = new System.Drawing.Point(1075, 333);
-            this.EditBtn.Name = "EditBtn";
-            this.EditBtn.Size = new System.Drawing.Size(144, 64);
-            this.EditBtn.TabIndex = 21;
-            this.EditBtn.Text = "Edit";
-            this.EditBtn.UseVisualStyleBackColor = false;
-            // 
             // ClearBtn
             // 
             this.ClearBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(69)))), ((int)(((byte)(156)))));
             this.ClearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ClearBtn.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClearBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClearBtn.Location = new System.Drawing.Point(1336, 333);
+            this.ClearBtn.Location = new System.Drawing.Point(1169, 333);
             this.ClearBtn.Name = "ClearBtn";
             this.ClearBtn.Size = new System.Drawing.Size(144, 64);
             this.ClearBtn.TabIndex = 20;
@@ -537,10 +524,21 @@
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Location = new System.Drawing.Point(-12, 114);
+            this.panel2.Location = new System.Drawing.Point(12, 77);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(150, 138);
             this.panel2.TabIndex = 37;
+            // 
+            // UnameLbl
+            // 
+            this.UnameLbl.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UnameLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(69)))), ((int)(((byte)(156)))));
+            this.UnameLbl.Location = new System.Drawing.Point(1351, 68);
+            this.UnameLbl.Name = "UnameLbl";
+            this.UnameLbl.Size = new System.Drawing.Size(166, 33);
+            this.UnameLbl.TabIndex = 45;
+            this.UnameLbl.Text = "Username";
+            this.UnameLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Bookings
             // 
@@ -615,7 +613,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button EditBtn;
         private System.Windows.Forms.Button ClearBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -628,5 +625,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DateTimePicker PickUpDate;
         private System.Windows.Forms.DataGridView BookingDGV;
+        private System.Windows.Forms.Label UnameLbl;
     }
 }

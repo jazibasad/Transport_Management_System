@@ -119,7 +119,40 @@ namespace Transport_Management_System
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
+            if (CustCb.SelectedIndex == -1  || VehicleCb.SelectedIndex == -1 || DriverTb.Text == "" || AmountTb.Text == "")
 
+            {
+                MessageBox.Show("Missing Information");
+                return;
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    SqlCommand cmd = new SqlCommand("insert into BookingTbl (CustName,Vehicle,Driver,PickupDate, DropoffDate,Amount,BUser) values (@CN, @Veh, @Dri, @PDate, @DDate,@Am, @UN)", Con);
+                    cmd.Parameters.AddWithValue("@CN", CustCb.SelectedValue.ToString());
+                    cmd.Parameters.AddWithValue("@Veh", VehicleCb.SelectedValue.ToString());
+                    cmd.Parameters.AddWithValue("@Dri", DriverTb.Text);
+                    cmd.Parameters.AddWithValue("@PDate", PickUpDate.Value.Date);
+                    cmd.Parameters.AddWithValue("@DDate", RetDate.Value.Date);
+                    cmd.Parameters.AddWithValue("@Am", AmountTb.Text);
+                    cmd.Parameters.AddWithValue("@UN", UnameLbl.Text);
+
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Vehicle Booked");
+
+                    Con.Close();
+                    ShowBookings();
+                    Clear();
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+
+
+                }
+            }
         }
 
         private void BookingDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
