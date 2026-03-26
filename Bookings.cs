@@ -32,8 +32,8 @@ namespace Transport_Management_System
             DataTable dt = new DataTable();
             dt.Columns.Add("CustName", typeof(String));
             dt.Load(rdr);
-            VehicleCb.ValueMember = "CustName";
-            VehicleCb.DataSource = dt;
+            CustCb.ValueMember = "CustName";
+            CustCb.DataSource = dt;
             Con.Close();
         }
 
