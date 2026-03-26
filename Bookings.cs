@@ -19,6 +19,7 @@ namespace Transport_Management_System
             GetCustomers();
             ShowBookings();
             GetCars();
+            UnameLbl.Text = Login.User;
         }
 
 
@@ -57,8 +58,9 @@ namespace Transport_Management_System
 
         private void GetCars()
         {
+            string Isbooked = "No";
             Con.Open();
-            SqlCommand cmd = new SqlCommand("select * from VehicleTbl", Con);
+            SqlCommand cmd = new SqlCommand("select * from VehicleTbl where Booked='" + Isbooked + "'", Con);
             SqlDataReader rdr;
             rdr = cmd.ExecuteReader();
             DataTable dt = new DataTable();
@@ -117,6 +119,24 @@ namespace Transport_Management_System
 
         }
 
+        private void UpdateVehicle()
+        {
+            try
+            {
+                Con.Open();
+                SqlCommand cmd = new SqlCommand("update VehicleTbl set Booked=@VB where VLp=@VP", Con);
+                cmd.Parameters.AddWithValue("@VP", VehicleCb.SelectedValue.ToString());
+                cmd.Parameters.AddWithValue("@VB", "Yes");
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Vehicle Updated");
+                Con.Close();
+                Clear();
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+        }
         private void SaveBtn_Click(object sender, EventArgs e)
         {
             if (CustCb.SelectedIndex == -1  || VehicleCb.SelectedIndex == -1 || DriverTb.Text == "" || AmountTb.Text == "")
@@ -144,6 +164,8 @@ namespace Transport_Management_System
 
                     Con.Close();
                     ShowBookings();
+                    UpdateVehicle();
+                    GetCars();
                     Clear();
                 }
                 catch (Exception Ex)
@@ -189,6 +211,11 @@ namespace Transport_Management_System
             Drivers Obj = new Drivers();
             Obj.Show();
             this.Hide();
+        }
+
+        private void UnameLbl_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
