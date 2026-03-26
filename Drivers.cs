@@ -86,19 +86,17 @@ namespace Transport_Management_System
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\TransportDb.mdf;Integrated Security=True;Connect Timeout=30");
 
         private void GetCars()
-        {
-            Con.Open(); 
+        {    
+            Con.Open();
             SqlCommand cmd = new SqlCommand("select * from VehicleTbl", Con);
             SqlDataReader rdr;
-            rdr =  cmd.ExecuteReader();
+            rdr = cmd.ExecuteReader();
             DataTable dt = new DataTable();
             dt.Columns.Add("Vlp", typeof(String));
             dt.Load(rdr);
             VehicleCb.ValueMember = "Vlp";
             VehicleCb.DataSource = dt;
-
-            Con.Close();    
-
+            Con.Close(); 
         }
 
 
@@ -189,8 +187,11 @@ namespace Transport_Management_System
             else if (DriverDGV.SelectedRows.Count > 0)
             {
                 int.TryParse(DriverDGV.SelectedRows[0].Cells[0].Value.ToString(), out Key);
-            }
-        }
+            } 
+
+            
+
+        } 
 
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
@@ -209,6 +210,45 @@ namespace Transport_Management_System
                     cmd.Parameters.AddWithValue("@DrKey", Key);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Driver Deleted");
+
+                    Con.Close();
+                    ShowDrivers();
+                    Clear();
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+
+
+                }
+            }
+        }
+
+        private void EditBtn_Click(object sender, EventArgs e)
+        {
+            if (DrNameTb.Text == "" || GenCb.SelectedIndex == -1 || PhoneTb.Text == "" || DrAdd.Text == "" || RatingCb.SelectedIndex == -1)
+
+            {
+                MessageBox.Show("Select Diver Information");
+                return;
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    SqlCommand cmd = new SqlCommand("update  DriverTbl set DrName = @DRN, DrVehicle=@DrV, Drphone=@DrP, DrAdd=@DRA, DrDOB=@DRD, DrJoinDate=@DRJ,DrGen= @DrG,DrRating=@DrR  where DrId=@DrKey ", Con);
+                    cmd.Parameters.AddWithValue("@DRN", DrNameTb.Text);
+                    cmd.Parameters.AddWithValue("@DRV", VehicleCb.SelectedValue.ToString());
+                    cmd.Parameters.AddWithValue("@DRP", PhoneTb.Text);
+                    cmd.Parameters.AddWithValue("@DRA", DrAdd.Text);
+                    cmd.Parameters.AddWithValue("@DRD", DOB.Value.ToString());
+                    cmd.Parameters.AddWithValue("@DRJ", JoinDate.Value.ToString());
+                    cmd.Parameters.AddWithValue("@DRG", GenCb.SelectedItem?.ToString() ?? "");
+                    cmd.Parameters.AddWithValue("@DRR", RatingCb.SelectedItem?.ToString() ?? "");
+                    cmd.Parameters.AddWithValue("@DrKey", Key);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Driver Recorded");
 
                     Con.Close();
                     ShowDrivers();
