@@ -86,7 +86,7 @@ namespace Transport_Management_System
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\TransportDb.mdf;Integrated Security=True;Connect Timeout=30");
 
         private void GetCars()
-        {    
+        {
             Con.Open();
             SqlCommand cmd = new SqlCommand("select * from VehicleTbl", Con);
             SqlDataReader rdr;
@@ -96,7 +96,7 @@ namespace Transport_Management_System
             dt.Load(rdr);
             VehicleCb.ValueMember = "Vlp";
             VehicleCb.DataSource = dt;
-            Con.Close(); 
+            Con.Close();
         }
 
 
@@ -127,7 +127,7 @@ namespace Transport_Management_System
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
-            if (DrNameTb.Text == "" || GenCb.SelectedIndex == -1 || PhoneTb.Text == "" || DrAdd.Text == "" || RatingCb.SelectedIndex == -1 )
+            if (DrNameTb.Text == "" || GenCb.SelectedIndex == -1 || PhoneTb.Text == "" || DrAdd.Text == "" || RatingCb.SelectedIndex == -1)
 
             {
                 MessageBox.Show("Missing Information");
@@ -187,11 +187,11 @@ namespace Transport_Management_System
             else if (DriverDGV.SelectedRows.Count > 0)
             {
                 int.TryParse(DriverDGV.SelectedRows[0].Cells[0].Value.ToString(), out Key);
-            } 
+            }
 
-            
 
-        } 
+
+        }
 
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
