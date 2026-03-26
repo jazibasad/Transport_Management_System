@@ -76,6 +76,9 @@
             this.DNumLbl = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.BestDriverLbl = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.BestCustLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -279,7 +282,7 @@
             // 
             this.label13.Font = new System.Drawing.Font("Bookman Old Style", 19.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(69)))), ((int)(((byte)(156)))));
-            this.label13.Location = new System.Drawing.Point(1734, 489);
+            this.label13.Location = new System.Drawing.Point(1734, 179);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(269, 86);
             this.label13.TabIndex = 54;
@@ -587,12 +590,49 @@
             this.panel9.Size = new System.Drawing.Size(408, 187);
             this.panel9.TabIndex = 42;
             // 
+            // BestDriverLbl
+            // 
+            this.BestDriverLbl.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BestDriverLbl.ForeColor = System.Drawing.Color.Black;
+            this.BestDriverLbl.Location = new System.Drawing.Point(1734, 634);
+            this.BestDriverLbl.Name = "BestDriverLbl";
+            this.BestDriverLbl.Size = new System.Drawing.Size(260, 86);
+            this.BestDriverLbl.TabIndex = 58;
+            this.BestDriverLbl.Text = "Driver Name";
+            this.BestDriverLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(1731, 458);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(260, 86);
+            this.label9.TabIndex = 59;
+            this.label9.Text = "Most Income";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // BestCustLbl
+            // 
+            this.BestCustLbl.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BestCustLbl.ForeColor = System.Drawing.Color.Black;
+            this.BestCustLbl.Location = new System.Drawing.Point(1731, 772);
+            this.BestCustLbl.Name = "BestCustLbl";
+            this.BestCustLbl.Size = new System.Drawing.Size(260, 86);
+            this.BestCustLbl.TabIndex = 60;
+            this.BestCustLbl.Text = "Customer Name";
+            this.BestCustLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BestCustLbl.Click += new System.EventHandler(this.label12_Click_1);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(2003, 1071);
+            this.Controls.Add(this.BestCustLbl);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.BestDriverLbl);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
@@ -688,5 +728,8 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label BookNumLbl;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label BestDriverLbl;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label BestCustLbl;
     }
 }

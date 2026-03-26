@@ -21,6 +21,8 @@ namespace Transport_Management_System
             CountDrivers();
             CountBookings();
             CountCust();
+            BestCust();
+            BestDriver();
         }
 
         private void label14_Click(object sender, EventArgs e)
@@ -120,6 +122,36 @@ namespace Transport_Management_System
 
         }
 
+        private void BestCust()
+        {
+            Con.Open();
+            string InnerQuery = "select max(Amount) from  BookingTbl";
+            DataTable dt1 = new DataTable();
+            SqlDataAdapter sda1 = new SqlDataAdapter(InnerQuery, Con);
+            sda1.Fill(dt1);
+            string Query = "select CustName from  BookingTbl where Amount = '" + dt1.Rows[0][0].ToString() + "'";
+            SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            BestCustLbl.Text = dt.Rows[0][0].ToString();
+            Con.Close();
+        }
+
+        private void BestDriver()
+        {
+            Con.Open();
+            string Query = "SELECT  Driver, COUNT(*) from BookingTbl GROUP BY Driver ORDER BY COUNT(Driver) DESC";
+            SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            BestDriverLbl.Text = dt.Rows[0][0].ToString();
+            Con.Close();
+        }
+
+
+      
+
+        
 
 
         private void Dashboard_Load(object sender, EventArgs e)
@@ -130,6 +162,11 @@ namespace Transport_Management_System
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void label12_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
