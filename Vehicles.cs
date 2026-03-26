@@ -18,6 +18,7 @@ namespace Transport_Management_System
             InitializeComponent();
             
             ShowVehicles();
+            GetDrivers();  
         }
 
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\TransportDb.mdf;Integrated Security=True;Connect Timeout=30");
@@ -51,6 +52,20 @@ namespace Transport_Management_System
 
         }
 
+
+        private void GetDrivers()
+        {
+            Con.Open();
+            SqlCommand cmd = new SqlCommand("select * from DriverTbl", Con);
+            SqlDataReader rdr;
+            rdr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("DrName", typeof(String));
+            dt.Load(rdr);
+            DriverCb.ValueMember = "DrName";
+            DriverCb.DataSource = dt;
+            Con.Close();
+        }
         private void SaveBtn_Click(object sender, EventArgs e)
         {
             if (LPlateTb.Text == "" || MarkCb.SelectedIndex == -1 || ModelTb.Text == "" || VYearCb.SelectedIndex == -1 || EngTypeCb.SelectedIndex == -1 || ColorTb.Text == "" || MilleageTb.Text == "" || TypeCb.SelectedIndex == -1 || BookedCb.SelectedIndex == -1)
@@ -64,7 +79,7 @@ namespace Transport_Management_System
                 try
                 {
                     Con.Open();
-                    SqlCommand cmd = new SqlCommand("insert into VehicleTbl (VLp,Vmark,Vmodel,VYear,VEngType,VColor,VMilleage,VType,Booked ) values (@VP, @Vma, @Vmo, @VY, @VEng, @VCo, @VMi, @VTy, @VB )", Con);
+                    SqlCommand cmd = new SqlCommand("insert into VehicleTbl (VLp,Vmark,Vmodel,VYear,VEngType,VColor,VMilleage,VType,Booked,Driver ) values (@VP, @Vma, @Vmo, @VY, @VEng, @VCo, @VMi, @VTy, @VB,@DR)", Con);
                     cmd.Parameters.AddWithValue("@VP", LPlateTb.Text);
                     cmd.Parameters.AddWithValue("@Vma", MarkCb.SelectedItem.ToString());
                     cmd.Parameters.AddWithValue("@Vmo", ModelTb.Text);
@@ -74,6 +89,7 @@ namespace Transport_Management_System
                     cmd.Parameters.AddWithValue("@VMi", MilleageTb.Text);
                     cmd.Parameters.AddWithValue("@VTy", TypeCb.SelectedItem.ToString());
                     cmd.Parameters.AddWithValue("@VB", BookedCb.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("@Dr", DriverCb.SelectedValue.ToString());
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Vehicle Recorded");
 
@@ -104,7 +120,7 @@ namespace Transport_Management_System
                 try
                 {
                     Con.Open();
-                    SqlCommand cmd = new SqlCommand("update VehicleTbl set Vmark=@Vma,Vmodel=@Vmo,VYear=@VY,VEngType=@VEng,VColor=@VCo,VMilleage=@VMi,VType=@VTy,Booked=@VB where VLp=@VP", Con);
+                    SqlCommand cmd = new SqlCommand("update VehicleTbl set Vmark=@Vma,Vmodel=@Vmo,VYear=@VY,VEngType=@VEng,VColor=@VCo,VMilleage=@VMi,VType=@VTy,Booked=@VB ,Driver=@Dr where VLp=@VP", Con);
                     cmd.Parameters.AddWithValue("@VP", LPlateTb.Text);
                     cmd.Parameters.AddWithValue("@Vma", MarkCb.SelectedItem.ToString());
                     cmd.Parameters.AddWithValue("@Vmo", ModelTb.Text);
@@ -114,6 +130,7 @@ namespace Transport_Management_System
                     cmd.Parameters.AddWithValue("@VMi", MilleageTb.Text);
                     cmd.Parameters.AddWithValue("@VTy", TypeCb.SelectedItem.ToString());
                     cmd.Parameters.AddWithValue("@VB", BookedCb.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("@Dr", DriverCb.SelectedValue.ToString());
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Vehicle Updated");
                     Con.Close();

@@ -74,6 +74,7 @@
             this.LPlateTb = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.DriverCb = new System.Windows.Forms.ComboBox();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -321,6 +322,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.DriverCb);
             this.panel1.Controls.Add(this.VehicleDGV);
             this.panel1.Controls.Add(this.BookedCb);
             this.panel1.Controls.Add(this.label11);
@@ -441,7 +443,7 @@
             this.MilleageTb.Font = new System.Drawing.Font("Arial", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MilleageTb.Location = new System.Drawing.Point(713, 320);
             this.MilleageTb.Name = "MilleageTb";
-            this.MilleageTb.Size = new System.Drawing.Size(259, 39);
+            this.MilleageTb.Size = new System.Drawing.Size(163, 39);
             this.MilleageTb.TabIndex = 29;
             this.MilleageTb.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
@@ -450,7 +452,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label15.Location = new System.Drawing.Point(1064, 265);
+            this.label15.Location = new System.Drawing.Point(940, 278);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(89, 32);
             this.label15.TabIndex = 28;
@@ -460,9 +462,9 @@
             // ColorTb
             // 
             this.ColorTb.Font = new System.Drawing.Font("Arial", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ColorTb.Location = new System.Drawing.Point(1070, 320);
+            this.ColorTb.Location = new System.Drawing.Point(929, 322);
             this.ColorTb.Name = "ColorTb";
-            this.ColorTb.Size = new System.Drawing.Size(259, 39);
+            this.ColorTb.Size = new System.Drawing.Size(144, 39);
             this.ColorTb.TabIndex = 27;
             this.ColorTb.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
@@ -656,6 +658,23 @@
             this.panel2.TabIndex = 27;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // DriverCb
+            // 
+            this.DriverCb.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DriverCb.FormattingEnabled = true;
+            this.DriverCb.Items.AddRange(new object[] {
+            "Toyota",
+            "Honda",
+            "Suzuki",
+            "Nissan",
+            "Hino",
+            "Isuzu"});
+            this.DriverCb.Location = new System.Drawing.Point(1147, 319);
+            this.DriverCb.Name = "DriverCb";
+            this.DriverCb.Size = new System.Drawing.Size(259, 40);
+            this.DriverCb.TabIndex = 36;
+            this.DriverCb.Text = "Drivers";
+            // 
             // Vehicles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -747,5 +766,6 @@
         private System.Windows.Forms.ComboBox BookedCb;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridView VehicleDGV;
+        private System.Windows.Forms.ComboBox DriverCb;
     }
 }

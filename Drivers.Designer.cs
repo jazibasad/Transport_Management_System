@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Drivers));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
             this.RatingCb = new System.Windows.Forms.ComboBox();
             this.DriverDGV = new System.Windows.Forms.DataGridView();
             this.EditBtn = new System.Windows.Forms.Button();
@@ -47,7 +46,6 @@
             this.DrAdd = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.PhoneTb = new System.Windows.Forms.TextBox();
-            this.VehicleCb = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.DrNameTb = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -93,7 +91,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.RatingCb);
             this.panel1.Controls.Add(this.DriverDGV);
             this.panel1.Controls.Add(this.EditBtn);
@@ -108,7 +105,6 @@
             this.panel1.Controls.Add(this.DrAdd);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.PhoneTb);
-            this.panel1.Controls.Add(this.VehicleCb);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.DrNameTb);
             this.panel1.Controls.Add(this.label7);
@@ -117,17 +113,6 @@
             this.panel1.Size = new System.Drawing.Size(1535, 1165);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label14.Location = new System.Drawing.Point(378, 176);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(236, 32);
-            this.label14.TabIndex = 39;
-            this.label14.Text = "Vehicle Number";
             // 
             // RatingCb
             // 
@@ -139,7 +124,7 @@
             "3",
             "4",
             "5"});
-            this.RatingCb.Location = new System.Drawing.Point(714, 293);
+            this.RatingCb.Location = new System.Drawing.Point(717, 219);
             this.RatingCb.Name = "RatingCb";
             this.RatingCb.Size = new System.Drawing.Size(259, 40);
             this.RatingCb.TabIndex = 38;
@@ -151,23 +136,23 @@
             this.DriverDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DriverDGV.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.DriverDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DriverDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DriverDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.DriverDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.MenuBar;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DriverDGV.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.MenuBar;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DriverDGV.DefaultCellStyle = dataGridViewCellStyle6;
             this.DriverDGV.Location = new System.Drawing.Point(0, 549);
             this.DriverDGV.MultiSelect = false;
             this.DriverDGV.Name = "DriverDGV";
@@ -303,7 +288,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label9.Location = new System.Drawing.Point(747, 175);
+            this.label9.Location = new System.Drawing.Point(410, 175);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(197, 32);
             this.label9.TabIndex = 11;
@@ -312,19 +297,10 @@
             // PhoneTb
             // 
             this.PhoneTb.Font = new System.Drawing.Font("Arial", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PhoneTb.Location = new System.Drawing.Point(714, 220);
+            this.PhoneTb.Location = new System.Drawing.Point(377, 220);
             this.PhoneTb.Name = "PhoneTb";
             this.PhoneTb.Size = new System.Drawing.Size(259, 39);
             this.PhoneTb.TabIndex = 10;
-            // 
-            // VehicleCb
-            // 
-            this.VehicleCb.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VehicleCb.FormattingEnabled = true;
-            this.VehicleCb.Location = new System.Drawing.Point(384, 219);
-            this.VehicleCb.Name = "VehicleCb";
-            this.VehicleCb.Size = new System.Drawing.Size(259, 40);
-            this.VehicleCb.TabIndex = 9;
             // 
             // label8
             // 
@@ -421,6 +397,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // panel4
             // 
@@ -453,6 +430,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // panel5
             // 
@@ -485,6 +463,7 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 2;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // panel6
             // 
@@ -651,7 +630,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox DrNameTb;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox VehicleCb;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox PhoneTb;
         private System.Windows.Forms.Label label10;
@@ -669,7 +647,6 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.DataGridView DriverDGV;
         private System.Windows.Forms.ComboBox RatingCb;
-        private System.Windows.Forms.Label label14;
     }
 }
 

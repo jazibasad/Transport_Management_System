@@ -28,7 +28,7 @@ namespace Transport_Management_System
             // 3. Optional: Uncomment the line below to make the window open maximized
             // this.WindowState = FormWindowState.Maximized;
 
-            GetCars();
+            //GetCars();
             ShowDrivers();
         }
         int Key = 0;
@@ -85,7 +85,7 @@ namespace Transport_Management_System
 
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\TransportDb.mdf;Integrated Security=True;Connect Timeout=30");
 
-        private void GetCars()
+       /* private void GetCars()
         {
             Con.Open();
             SqlCommand cmd = new SqlCommand("select * from VehicleTbl", Con);
@@ -98,13 +98,14 @@ namespace Transport_Management_System
             VehicleCb.DataSource = dt;
             Con.Close();
         }
+       */
 
 
         private void Clear()
         {
             DrNameTb.Text = "";
             GenCb.SelectedIndex = -1;
-            VehicleCb.SelectedIndex = -1;
+            
             PhoneTb.Text = "";
             DrAdd.Text = "";
 
@@ -138,9 +139,9 @@ namespace Transport_Management_System
                 try
                 {
                     Con.Open();
-                    SqlCommand cmd = new SqlCommand("insert into DriverTbl (DrName,DrVehicle,Drphone,DrAdd,DrDOB,DrJoinDate,DrGen,DrRating) values (@DRN, @DrV, @DrP,@DRA,@DRD,@DRJ, @DrG,@DrR )", Con);
+                    SqlCommand cmd = new SqlCommand("insert into DriverTbl (DrName,Drphone,DrAdd,DrDOB,DrJoinDate,DrGen,DrRating) values (@DRN,  @DrP,@DRA,@DRD,@DRJ, @DrG,@DrR )", Con);
                     cmd.Parameters.AddWithValue("@DRN", DrNameTb.Text);
-                    cmd.Parameters.AddWithValue("@DRV", VehicleCb.SelectedValue.ToString());
+                    
                     cmd.Parameters.AddWithValue("@DRP", PhoneTb.Text);
                     cmd.Parameters.AddWithValue("@DRA", DrAdd.Text);
                     cmd.Parameters.AddWithValue("@DRD", DOB.Value.ToString());
@@ -172,13 +173,13 @@ namespace Transport_Management_System
         private void DriverDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DrNameTb.Text = DriverDGV.SelectedRows[0].Cells[1].Value.ToString();
-            VehicleCb.SelectedItem = DriverDGV.SelectedRows[0].Cells[2].Value.ToString();
-            PhoneTb.Text = DriverDGV.SelectedRows[0].Cells[3].Value.ToString();
-            DrAdd.Text = DriverDGV.SelectedRows[0].Cells[4].Value.ToString();
-            DOB.Text = DriverDGV.SelectedRows[0].Cells[5].Value.ToString();
-            JoinDate.Text = DriverDGV.SelectedRows[0].Cells[6].Value.ToString();
-            GenCb.Text = DriverDGV.SelectedRows[0].Cells[7].Value.ToString();
-            RatingCb.Text = DriverDGV.SelectedRows[0].Cells[8].Value.ToString();
+           
+            PhoneTb.Text = DriverDGV.SelectedRows[0].Cells[2].Value.ToString();
+            DrAdd.Text = DriverDGV.SelectedRows[0].Cells[3].Value.ToString();
+            DOB.Text = DriverDGV.SelectedRows[0].Cells[4].Value.ToString();
+            JoinDate.Text = DriverDGV.SelectedRows[0].Cells[5].Value.ToString();
+            GenCb.Text = DriverDGV.SelectedRows[0].Cells[6].Value.ToString();
+            RatingCb.Text = DriverDGV.SelectedRows[0].Cells[7].Value.ToString();
 
             if (string.IsNullOrWhiteSpace(DrNameTb.Text))
             {
@@ -237,9 +238,9 @@ namespace Transport_Management_System
                 try
                 {
                     Con.Open();
-                    SqlCommand cmd = new SqlCommand("update  DriverTbl set DrName = @DRN, DrVehicle=@DrV, Drphone=@DrP, DrAdd=@DRA, DrDOB=@DRD, DrJoinDate=@DRJ,DrGen= @DrG,DrRating=@DrR  where DrId=@DrKey ", Con);
+                    SqlCommand cmd = new SqlCommand("update  DriverTbl set DrName = @DRN, Drphone=@DrP, DrAdd=@DRA, DrDOB=@DRD, DrJoinDate=@DRJ,DrGen= @DrG,DrRating=@DrR  where DrId=@DrKey ", Con);
                     cmd.Parameters.AddWithValue("@DRN", DrNameTb.Text);
-                    cmd.Parameters.AddWithValue("@DRV", VehicleCb.SelectedValue.ToString());
+                    
                     cmd.Parameters.AddWithValue("@DRP", PhoneTb.Text);
                     cmd.Parameters.AddWithValue("@DRA", DrAdd.Text);
                     cmd.Parameters.AddWithValue("@DRD", DOB.Value.ToString());
@@ -261,6 +262,27 @@ namespace Transport_Management_System
 
                 }
             }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Customers Obj = new Customers();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Vehicles Obj = new Vehicles();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            Bookings Obj = new Bookings();
+            Obj.Show();
+            this.Hide();
         }
     }
 }

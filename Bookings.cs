@@ -39,6 +39,22 @@ namespace Transport_Management_System
         }
 
 
+       private void GetDrivers()
+        {
+            Con.Open();
+            string Query = "select * from VehicleTbl where Vlp = '" + VehicleCb.SelectedValue.ToString()+ "'" ;
+            SqlCommand cmd = new SqlCommand(Query, Con);
+            DataTable dt = new DataTable();
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            sda.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                DriverTb.Text = dr["Driver"].ToString();
+            }
+            Con.Close();
+        }
+        
+
         private void GetCars()
         {
             Con.Open();
@@ -114,6 +130,32 @@ namespace Transport_Management_System
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void VehicleCb_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            GetDrivers();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Vehicles Obj = new Vehicles();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Customers Obj = new Customers();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Drivers Obj = new Drivers();
+            Obj.Show();
+            this.Hide();
         }
     }
 }
