@@ -217,5 +217,19 @@ namespace Transport_Management_System
         {
 
         }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            Dashboard Obj = new Dashboard();
+            this.Hide();
+            Obj.Show();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Customers Obj = new Customers();
+            this.Hide();
+            Obj.Show();
+        }
     }
 }   
