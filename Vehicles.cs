@@ -16,6 +16,7 @@ namespace Transport_Management_System
         public Vehicles()
         {
             InitializeComponent();
+            
             ShowVehicles();
         }
 
