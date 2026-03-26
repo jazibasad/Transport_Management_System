@@ -99,7 +99,72 @@ namespace Transport_Management_System
 
         }
 
+
+        private void Clear()
+        {
+            DrNameTb.Text = "";
+            GenCb.SelectedIndex = -1;
+            VehicleCb.SelectedIndex = -1;
+            PhoneTb.Text = "";
+            DrAdd.Text = "";
+
+        }
+
+
+
+        private void ShowDrivers()
+        {
+            Con.Open();
+            string Query = "select * from DriverTbl";
+            SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
+            SqlCommandBuilder Builder = new SqlCommandBuilder(sda);
+            var ds = new DataSet();
+            sda.Fill(ds);
+            DriverDGV.DataSource = ds.Tables[0];
+            Con.Close();
+
+        }
+
         private void SaveBtn_Click(object sender, EventArgs e)
+        {
+            if (DrNameTb.Text == "" || GenCb.SelectedIndex == -1 || PhoneTb.Text == "" || DrAdd.Text == "" || RatingCb == -1 )
+
+            {
+                MessageBox.Show("Missing Information");
+                return;
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    SqlCommand cmd = new SqlCommand("insert into DriverTbl (DrName,DrVehicle,Drphone,DrAdd,DrDOB,DrJoinDate,DrGen,DrRating) values (@DRN, @DrV, @DrP, @DrG,@DrR )", Con);
+                    cmd.Parameters.AddWithValue("@DRN", DrNameTb.Text);
+                    cmd.Parameters.AddWithValue("@DRV", VehicleCb.SelectedValue.ToString());
+                    cmd.Parameters.AddWithValue("@DRP", PhoneTb.Text);
+                    cmd.Parameters.AddWithValue("@DRA", DrAdd.Text);
+                    cmd.Parameters.AddWithValue("@DRD", DOB.Value.ToString());
+                    cmd.Parameters.AddWithValue("@DRJ", JoinDate.Value.ToString());
+                    cmd.Parameters.AddWithValue("@DRG", GenCb.SelectedValue.ToString());
+                    cmd.Parameters.AddWithValue("@DRR", RatingCb.SelectedValue.ToString());
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Driver Recorded");
+
+                    Con.Close();
+                    ShowDrivers();
+                    Clear();
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+
+
+                }
+            }
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
