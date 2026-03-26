@@ -17,6 +17,10 @@ namespace Transport_Management_System
         {
             InitializeComponent();
             CountVehicles();
+            CountUsers();
+            CountDrivers();
+            CountBookings();
+            CountCust();
         }
 
         private void label14_Click(object sender, EventArgs e)
@@ -49,8 +53,73 @@ namespace Transport_Management_System
             sda.Fill(dt);
             VNumLbl.Text = dt.Rows[0][0].ToString();
             Con.Close();
+            SumAmt();
+        }
+
+        private void CountUsers()
+        {
+            Con.Open();
+            string Query = "select count(*) from  UserTbl";
+            SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            UNameLbl.Text = dt.Rows[0][0].ToString();
+            Con.Close();
 
         }
+
+
+        private void CountDrivers()
+        {
+            Con.Open();
+            string Query = "select count(*) from  DriverTbl";
+            SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            DNumLbl.Text = dt.Rows[0][0].ToString();
+            Con.Close();
+
+        }
+
+
+        private void CountBookings()
+        {
+            Con.Open();
+            string Query = "select count(*) from  BookingTbl";
+            SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            BookNumLbl.Text = dt.Rows[0][0].ToString();
+            Con.Close();
+
+        }
+
+
+        private void CountCust()
+        {
+            Con.Open();
+            string Query = "select count(*) from  CustomerTbl";
+            SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            CNumLbl.Text = dt.Rows[0][0].ToString();
+            Con.Close();
+
+        }
+
+
+        private void SumAmt()
+        {
+            Con.Open();
+            string Query = "select sum(Amount) from  BookingTbl";
+            SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            IncNumLbl.Text = "Rs" + dt.Rows[0][0].ToString();
+            Con.Close();
+
+        }
+
 
 
         private void Dashboard_Load(object sender, EventArgs e)

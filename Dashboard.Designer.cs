@@ -482,11 +482,12 @@
             // 
             this.IncNumLbl.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IncNumLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.IncNumLbl.Location = new System.Drawing.Point(175, 87);
+            this.IncNumLbl.Location = new System.Drawing.Point(57, 87);
             this.IncNumLbl.Name = "IncNumLbl";
-            this.IncNumLbl.Size = new System.Drawing.Size(118, 32);
+            this.IncNumLbl.Size = new System.Drawing.Size(312, 47);
             this.IncNumLbl.TabIndex = 37;
             this.IncNumLbl.Text = "Num";
+            this.IncNumLbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // panel19
             // 
