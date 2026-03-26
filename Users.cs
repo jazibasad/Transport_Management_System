@@ -16,7 +16,15 @@ namespace Transport_Management_System
         public Users()
         {
             InitializeComponent();
-           
+
+            // FIX: Force the text to be black so it's visible against the white background
+            UserDGV.DefaultCellStyle.ForeColor = Color.Black;
+            UserDGV.DefaultCellStyle.BackColor = Color.White;
+
+
+            // Ensure alternating rows aren't hiding text either
+            UserDGV.AlternatingRowsDefaultCellStyle.ForeColor = Color.Black;
+
             ShowUsers();
         }
 
