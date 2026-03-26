@@ -34,9 +34,36 @@ namespace Transport_Management_System
 
         }
 
+        int Key=0;
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
+            if (Key == 0)
 
+            {
+                MessageBox.Show("Select a User");
+                return;
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    SqlCommand cmd = new SqlCommand("delete from UserTbl where UId = @UKey ", Con);
+                    cmd.Parameters.AddWithValue("@UKey", Key);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("User Deleted");
+
+                    Con.Close();
+                    ShowUsers();
+                    Clear();
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+
+
+                }
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -103,6 +130,23 @@ namespace Transport_Management_System
                 }
             }
 
+        }
+
+        private void UserDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            UnameTb.Text = UserDGV.SelectedRows[0].Cells[1].Value.ToString();
+            PhoneTb.Text = UserDGV.SelectedRows[0].Cells[2].Value.ToString();
+            PasswordTb.Text = UserDGV.SelectedRows[0].Cells[3].Value.ToString();
+           
+
+            if (string.IsNullOrWhiteSpace(UnameTb.Text))
+            {
+                Key = 0;
+            }
+            else if (UserDGV.SelectedRows.Count > 0)
+            {
+                int.TryParse(UserDGV.SelectedRows[0].Cells[0].Value.ToString(), out Key);
+            }
         }
     }
 }
