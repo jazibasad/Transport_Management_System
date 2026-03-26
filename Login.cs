@@ -49,6 +49,19 @@ namespace Transport_Management_System
 
         private void label2_Click(object sender, EventArgs e)
         {
+            AdminLogin Obj = new AdminLogin();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
 
         }
     }

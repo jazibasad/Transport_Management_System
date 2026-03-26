@@ -54,7 +54,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(281, 93);
+            this.pictureBox1.Location = new System.Drawing.Point(291, 93);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(208, 211);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -85,7 +85,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bookman Old Style", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(294, 570);
+            this.label1.Location = new System.Drawing.Point(312, 570);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(154, 35);
             this.label1.TabIndex = 10;
@@ -105,7 +105,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(281, 734);
+            this.button3.Location = new System.Drawing.Point(304, 735);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(185, 77);
             this.button3.TabIndex = 22;
@@ -118,7 +118,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bookman Old Style", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(314, 852);
+            this.label2.Location = new System.Drawing.Point(337, 853);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(120, 35);
             this.label2.TabIndex = 23;
@@ -129,7 +129,7 @@
             // 
             this.panel8.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel8.Controls.Add(this.pictureBox2);
-            this.panel8.Location = new System.Drawing.Point(723, 93);
+            this.panel8.Location = new System.Drawing.Point(726, 12);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(54, 56);
             this.panel8.TabIndex = 56;
@@ -143,6 +143,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // Login
             // 
@@ -160,7 +161,9 @@
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

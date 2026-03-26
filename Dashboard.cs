@@ -168,5 +168,40 @@ namespace Transport_Management_System
         {
 
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            Bookings Obj = new Bookings();
+            this.Hide();
+            Obj.Show();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Vehicles Obj = new Vehicles();
+            this.Hide();
+            Obj.Show();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Customers Obj = new Customers();
+            this.Hide();
+            Obj.Show();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Drivers Obj = new Drivers();
+            this.Hide();
+            Obj.Show();
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            Login Obj = new Login();
+            this.Hide();
+            Obj.Show();
+        }
     }
 }
