@@ -85,7 +85,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bookman Old Style", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(318, 568);
+            this.label1.Location = new System.Drawing.Point(328, 569);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(154, 35);
             this.label1.TabIndex = 10;
@@ -94,7 +94,7 @@
             // PasswordTb
             // 
             this.PasswordTb.Font = new System.Drawing.Font("Arial", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordTb.Location = new System.Drawing.Point(197, 631);
+            this.PasswordTb.Location = new System.Drawing.Point(207, 632);
             this.PasswordTb.Name = "PasswordTb";
             this.PasswordTb.Size = new System.Drawing.Size(406, 39);
             this.PasswordTb.TabIndex = 9;
@@ -105,7 +105,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Bookman Old Style", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(302, 734);
+            this.button3.Location = new System.Drawing.Point(314, 734);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(185, 77);
             this.button3.TabIndex = 22;
@@ -118,7 +118,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bookman Old Style", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(335, 852);
+            this.label2.Location = new System.Drawing.Point(347, 852);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(120, 35);
             this.label2.TabIndex = 23;
