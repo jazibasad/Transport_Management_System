@@ -410,7 +410,7 @@
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(203, 62);
             this.label15.TabIndex = 25;
-            this.label15.Text = "Users";
+            this.label15.Text = "User";
             // 
             // UNameLbl
             // 
@@ -562,7 +562,7 @@
             // 
             // BestDriverLbl
             // 
-            this.BestDriverLbl.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BestDriverLbl.Font = new System.Drawing.Font("Bookman Old Style", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BestDriverLbl.ForeColor = System.Drawing.Color.Black;
             this.BestDriverLbl.Location = new System.Drawing.Point(1731, 451);
             this.BestDriverLbl.Name = "BestDriverLbl";
@@ -573,18 +573,18 @@
             // 
             // label9
             // 
-            this.label9.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Bookman Old Style", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(1731, 344);
+            this.label9.Location = new System.Drawing.Point(1731, 382);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(260, 86);
+            this.label9.Size = new System.Drawing.Size(260, 50);
             this.label9.TabIndex = 59;
             this.label9.Text = "Top Driver";
             this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // BestCustLbl
             // 
-            this.BestCustLbl.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BestCustLbl.Font = new System.Drawing.Font("Bookman Old Style", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BestCustLbl.ForeColor = System.Drawing.Color.Black;
             this.BestCustLbl.Location = new System.Drawing.Point(1731, 772);
             this.BestCustLbl.Name = "BestCustLbl";
@@ -596,14 +596,15 @@
             // 
             // label11
             // 
-            this.label11.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Bookman Old Style", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(1734, 639);
+            this.label11.Location = new System.Drawing.Point(1743, 717);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(260, 86);
+            this.label11.Size = new System.Drawing.Size(260, 43);
             this.label11.TabIndex = 60;
             this.label11.Text = "Top Customer";
             this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // Dashboard
             // 

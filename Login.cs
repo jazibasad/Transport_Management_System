@@ -32,7 +32,7 @@ namespace Transport_Management_System
             if (dt.Rows[0][0].ToString() == "1")
             {
                 User = UnameTb.Text;
-                Bookings Obj = new Bookings();
+                Dashboard Obj = new Dashboard();
                 Obj.Show();
                 this.Hide();
 

@@ -46,7 +46,7 @@ namespace Transport_Management_System
         int Key=0;
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
-            if (Key == 0)
+            /*if (Key == 0)
 
             {
                 MessageBox.Show("Select a User");
@@ -70,9 +70,69 @@ namespace Transport_Management_System
                 {
                     MessageBox.Show(Ex.Message);
 
+            
+                }
+            } */
 
+           
+        
+            if (Key == 0)
+            {
+                MessageBox.Show("Select a User to delete.");
+                return;
+            }
+
+            // Confirmation helps prevent accidental data loss
+            DialogResult dialogResult = MessageBox.Show("Are you sure? This will delete the User AND ALL system data!", "WARNING", MessageBoxButtons.YesNo);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                try
+                {
+                    Con.Open();
+
+                    // 1. Create a single command object
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.Connection = Con;
+
+                    // 2. Execute deletes one by one using the same command object
+                    // Order matters if you have Foreign Keys! Delete children first.
+
+                    cmd.CommandText = "DELETE FROM BookingTbl";
+                    cmd.ExecuteNonQuery();
+
+                    cmd.CommandText = "DELETE FROM CustomerTbl";
+                    cmd.ExecuteNonQuery();
+
+                    cmd.CommandText = "DELETE FROM DriverTbl";
+                    cmd.ExecuteNonQuery();
+
+                    cmd.CommandText = "DELETE FROM VehicleTbl";
+                    cmd.ExecuteNonQuery();
+
+                    // 3. Finally, delete the specific user
+                    cmd.CommandText = "DELETE FROM UserTbl WHERE UId = @UKey";
+                    cmd.Parameters.AddWithValue("@UKey", Key);
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Entire database has been wiped and User removed.");
+
+                    Con.Close();
+                    ShowUsers();
+                    Clear();
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show("Error during wipe: " + Ex.Message);
+                    if (Con.State == ConnectionState.Open) Con.Close();
                 }
             }
+
+
+
+
+
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -109,7 +169,7 @@ namespace Transport_Management_System
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
-            if (UnameTb.Text == "" || PhoneTb.Text == "" || PasswordTb.Text == "")
+            /*if (UnameTb.Text == "" || PhoneTb.Text == "" || PasswordTb.Text == "")
 
             {
                 MessageBox.Show("Missing Information");
@@ -138,6 +198,47 @@ namespace Transport_Management_System
 
 
                 }
+            } */
+
+
+            if (UnameTb.Text == "" || PhoneTb.Text == "" || PasswordTb.Text == "")
+            {
+                MessageBox.Show("Missing Information");
+                return;
+            }
+
+            try
+            {
+                Con.Open();
+
+                // 1. Check if a user already exists
+                SqlCommand checkCmd = new SqlCommand("SELECT COUNT(*) FROM UserTbl", Con);
+                int userCount = (int)checkCmd.ExecuteScalar();
+
+                if (userCount >= 1)
+                {
+                    MessageBox.Show("A user already exists. You must delete the current user before adding a new one.");
+                    Con.Close();
+                    return; // Stop the execution here
+                }
+
+                // 2. If no user exists, proceed with the insert
+                SqlCommand cmd = new SqlCommand("insert into UserTbl (UName,Uphone,Upassword ) values (@UN, @UP, @UPa)", Con);
+                cmd.Parameters.AddWithValue("@UN", UnameTb.Text);
+                cmd.Parameters.AddWithValue("@UP", PhoneTb.Text);
+                cmd.Parameters.AddWithValue("@UPa", PasswordTb.Text);
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("User Recorded Successfully");
+
+                Con.Close();
+                ShowUsers();
+                Clear();
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show("Error: " + Ex.Message);
+                if (Con.State == ConnectionState.Open) Con.Close();
             }
 
         }
