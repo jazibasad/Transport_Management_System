@@ -31,7 +31,7 @@ namespace Transport_Management_System
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (PasswordTb.Text == "Password")
+            if (PasswordTb.Text == "Admin")
             {
                 Users Obj = new Users();
                 Obj.Show();
@@ -43,6 +43,11 @@ namespace Transport_Management_System
                 MessageBox.Show("Wrong Admin Password");
                 PasswordTb.Text = "";
             }
+        }
+
+        private void AdminLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
