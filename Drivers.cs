@@ -139,7 +139,7 @@ namespace Transport_Management_System
                 try
                 {
                     Con.Open();
-                    SqlCommand cmd = new SqlCommand("insert into DriverTbl (DrName,Drphone,DrAdd,DrDOB,DrJoinDate,DrGen,DrRating) values (@DRN,  @DrP,@DRA,@DRD,@DRJ, @DrG,@DrR )", Con);
+                    SqlCommand cmd = new SqlCommand("insert into DriverTbl (DrName,Drphone,DrAdd,DrDOB,DrJoinDate,DrGen,DrRating) values (@DRN,  @DRP,@DRA,@DRD,@DRJ, @DrG,@DrR )", Con);
                     cmd.Parameters.AddWithValue("@DRN", DrNameTb.Text);
                     
                     cmd.Parameters.AddWithValue("@DRP", PhoneTb.Text);
