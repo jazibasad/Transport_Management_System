@@ -110,39 +110,7 @@ namespace Transport_Management_System
 
         private void EditBtn_Click(object sender, EventArgs e)
         {
-            /*if (LPlateTb.Text == "" || MarkCb.SelectedIndex == -1 || ModelTb.Text == "" || VYearCb.SelectedIndex == -1 || EngTypeCb.SelectedIndex == -1 || ColorTb.Text == "" || MilleageTb.Text == "" || TypeCb.SelectedIndex == -1 || BookedCb.SelectedIndex == -1)
-            {
-                MessageBox.Show("Missing Information");
-                return;
-            }
-            else
-            {
-                try
-                {
-                    Con.Open();
-                    SqlCommand cmd = new SqlCommand("update VehicleTbl set Vmark=@Vma,Vmodel=@Vmo,VYear=@VY,VEngType=@VEng,VColor=@VCo,VMilleage=@VMi,VType=@VTy,Booked=@VB ,Driver=@Dr where VLp=@VP", Con);
-                    cmd.Parameters.AddWithValue("@VP", LPlateTb.Text);
-                    cmd.Parameters.AddWithValue("@Vma", MarkCb.SelectedItem.ToString());
-                    cmd.Parameters.AddWithValue("@Vmo", ModelTb.Text);
-                    cmd.Parameters.AddWithValue("@VY", VYearCb.SelectedItem.ToString());
-                    cmd.Parameters.AddWithValue("@VEng", EngTypeCb.SelectedItem.ToString());
-                    cmd.Parameters.AddWithValue("@VCo", ColorTb.Text);
-                    cmd.Parameters.AddWithValue("@VMi", MilleageTb.Text);
-                    cmd.Parameters.AddWithValue("@VTy", TypeCb.SelectedItem.ToString());
-                    cmd.Parameters.AddWithValue("@VB", BookedCb.SelectedItem.ToString());
-                    cmd.Parameters.AddWithValue("@Dr", DriverCb.SelectedValue.ToString());
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Vehicle Updated");
-                    Con.Close();
-                    ShowVehicles();
-                    Clear();
-                }
-                catch (Exception Ex)
-                {
-                    MessageBox.Show(Ex.Message);
-                }
-            } */
-
+            
 
          
             if (LPlateTb.Text == "" || BookedCb.SelectedIndex == -1)
@@ -222,15 +190,7 @@ namespace Transport_Management_System
 
         private void VehicleDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            /* LPlateTb.Text = VehicleDGV.SelectedRows[0].Cells[0].Value.ToString();
-             MarkCb.SelectedItem = VehicleDGV.SelectedRows[0].Cells[1].Value.ToString();
-             ModelTb.Text = VehicleDGV.SelectedRows[0].Cells[2].Value.ToString();
-             VYearCb.SelectedItem = VehicleDGV.SelectedRows[0].Cells[3].Value.ToString();
-             EngTypeCb.SelectedItem = VehicleDGV.SelectedRows[0].Cells[4].Value.ToString();
-             ColorTb.Text = VehicleDGV.SelectedRows[0].Cells[5].Value.ToString();
-             MilleageTb.Text = VehicleDGV.SelectedRows[0].Cells[6].Value.ToString();
-             TypeCb.SelectedItem = VehicleDGV.SelectedRows[0].Cells[7].Value.ToString();
-             BookedCb.SelectedItem = VehicleDGV.SelectedRows[0].Cells[8].Value.ToString(); */
+            
 
             // Check if the user clicked a header row (index -1)
             if (e.RowIndex >= 0)
