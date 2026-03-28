@@ -1,8 +1,8 @@
-#Transport Management System (TMS)
+Transport Management System (TMS)
 
 A desktop-based enterprise solution built with C# WinForms and SQL Server to manage fleet operations, driver assignments, and customer bookings. This project features a robust data-driven architecture and a real-time analytics dashboard.
 
-###🚀 Key Features
+🚀 Key Features
 
 1. Fleet & Personnel Management
 •	Dynamic Inventory: Full CRUD (Create, Read, Update, Delete) operations for vehicles, including technical specs like engine type and mileage.
@@ -25,14 +25,14 @@ A desktop-based enterprise solution built with C# WinForms and SQL Server to man
 ________________________________________
 
 
-###🛠️ Technical Stack
+🛠️ Technical Stack
 •	Language: C# (.NET Framework)
 •	Database: Microsoft SQL Server (LocalDB)
 •	Architecture: ADO.NET with Parameterized Queries (SQL Injection protection)
 •	IDE: Visual Studio 2022
 ________________________________________
 
-###📂 Project Structure
+📂 Project Structure
 File	Description
 Program.cs	Entry point with High-DPI scaling logic.
 Login.cs	Main authentication and session management.
@@ -43,7 +43,7 @@ Users.cs	Admin-only module for user control and system resets.
 ________________________________________
 
 
-###⚙️ Installation & Setup
+⚙️ Installation & Setup
 1.	Clone the Repository:
 Bash
 git clone https://github.com/jazib_asad/Transport-Management-System.git
@@ -56,11 +56,11 @@ SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Attac
 
 3.	Run: Open the .sln file in Visual Studio and press F5.
 ________________________________________
-###📈 Future Enhancements
+📈 Future Enhancements
 •	[ ] Integration of PDF Invoice generation for customers.
 •	[ ] SMS API integration for booking confirmations.
 •	[ ] Multi-language support (English/Urdu toggle).
 ________________________________________
-###Developed by: Jazib Asad
-###Computer Science Professional & Student
+Developed by: Jazib Asad
+Computer Science Professional & Student
 
