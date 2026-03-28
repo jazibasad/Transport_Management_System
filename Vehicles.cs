@@ -110,7 +110,7 @@ namespace Transport_Management_System
 
         private void EditBtn_Click(object sender, EventArgs e)
         {
-            if (LPlateTb.Text == "" || MarkCb.SelectedIndex == -1 || ModelTb.Text == "" || VYearCb.SelectedIndex == -1 || EngTypeCb.SelectedIndex == -1 || ColorTb.Text == "" || MilleageTb.Text == "" || TypeCb.SelectedIndex == -1 || BookedCb.SelectedIndex == -1)
+            /*if (LPlateTb.Text == "" || MarkCb.SelectedIndex == -1 || ModelTb.Text == "" || VYearCb.SelectedIndex == -1 || EngTypeCb.SelectedIndex == -1 || ColorTb.Text == "" || MilleageTb.Text == "" || TypeCb.SelectedIndex == -1 || BookedCb.SelectedIndex == -1)
             {
                 MessageBox.Show("Missing Information");
                 return;
@@ -141,8 +141,50 @@ namespace Transport_Management_System
                 {
                     MessageBox.Show(Ex.Message);
                 }
+            } */
+
+
+         
+            if (LPlateTb.Text == "" || BookedCb.SelectedIndex == -1)
+            {
+                MessageBox.Show("Missing Information"); return;
             }
+            try
+            {
+                Con.Open();
+                // 1. Update Vehicle Info as usual
+                string updateQuery = "update VehicleTbl set Vmark=@Vma, Vmodel=@Vmo, VYear=@VY, VEngType=@VEng, VColor=@VCo, VMilleage=@VMi, VType=@VTy, Booked=@VB, Driver=@Dr where VLp=@VP";
+                SqlCommand cmd = new SqlCommand(updateQuery, Con);
+                cmd.Parameters.AddWithValue("@VP", LPlateTb.Text);
+                cmd.Parameters.AddWithValue("@Vma", MarkCb.SelectedItem.ToString());
+                cmd.Parameters.AddWithValue("@Vmo", ModelTb.Text);
+                cmd.Parameters.AddWithValue("@VY", VYearCb.SelectedItem.ToString());
+                cmd.Parameters.AddWithValue("@VEng", EngTypeCb.SelectedItem.ToString());
+                cmd.Parameters.AddWithValue("@VCo", ColorTb.Text);
+                cmd.Parameters.AddWithValue("@VMi", MilleageTb.Text);
+                cmd.Parameters.AddWithValue("@VTy", TypeCb.SelectedItem.ToString());
+                cmd.Parameters.AddWithValue("@VB", BookedCb.SelectedItem.ToString());
+                cmd.Parameters.AddWithValue("@Dr", DriverCb.SelectedValue.ToString());
+                cmd.ExecuteNonQuery();
+
+                // 2. TRIGGER: If releasing the car (Status set to 'No')
+                if (BookedCb.SelectedItem.ToString() == "No")
+                {
+                    // Rename the vehicle in BookingTbl so it 'hides' from the Grid
+                    // But the Amount and Customer remain for the Dashboard!
+                    string hideQuery = "update BookingTbl set Vehicle = 'Returned - ' + Vehicle where Vehicle = @VP AND Vehicle NOT LIKE 'Returned%'";
+                    SqlCommand cmdHide = new SqlCommand(hideQuery, Con);
+                    cmdHide.Parameters.AddWithValue("@VP", LPlateTb.Text);
+                    cmdHide.ExecuteNonQuery();
+                    MessageBox.Show("Vehicle Released. Record moved to History.");
+                }
+                Con.Close();
+                ShowVehicles();
+                Clear();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); if (Con.State == ConnectionState.Open) Con.Close(); }
         }
+        
 
 
 
@@ -180,16 +222,34 @@ namespace Transport_Management_System
 
         private void VehicleDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            LPlateTb.Text = VehicleDGV.SelectedRows[0].Cells[0].Value.ToString();
-            MarkCb.SelectedItem = VehicleDGV.SelectedRows[0].Cells[1].Value.ToString();
-            ModelTb.Text = VehicleDGV.SelectedRows[0].Cells[2].Value.ToString();
-            VYearCb.SelectedItem = VehicleDGV.SelectedRows[0].Cells[3].Value.ToString();
-            EngTypeCb.SelectedItem = VehicleDGV.SelectedRows[0].Cells[4].Value.ToString();
-            ColorTb.Text = VehicleDGV.SelectedRows[0].Cells[5].Value.ToString();
-            MilleageTb.Text = VehicleDGV.SelectedRows[0].Cells[6].Value.ToString();
-            TypeCb.SelectedItem = VehicleDGV.SelectedRows[0].Cells[7].Value.ToString();
-            BookedCb.SelectedItem = VehicleDGV.SelectedRows[0].Cells[8].Value.ToString();
+            /* LPlateTb.Text = VehicleDGV.SelectedRows[0].Cells[0].Value.ToString();
+             MarkCb.SelectedItem = VehicleDGV.SelectedRows[0].Cells[1].Value.ToString();
+             ModelTb.Text = VehicleDGV.SelectedRows[0].Cells[2].Value.ToString();
+             VYearCb.SelectedItem = VehicleDGV.SelectedRows[0].Cells[3].Value.ToString();
+             EngTypeCb.SelectedItem = VehicleDGV.SelectedRows[0].Cells[4].Value.ToString();
+             ColorTb.Text = VehicleDGV.SelectedRows[0].Cells[5].Value.ToString();
+             MilleageTb.Text = VehicleDGV.SelectedRows[0].Cells[6].Value.ToString();
+             TypeCb.SelectedItem = VehicleDGV.SelectedRows[0].Cells[7].Value.ToString();
+             BookedCb.SelectedItem = VehicleDGV.SelectedRows[0].Cells[8].Value.ToString(); */
+
+            // Check if the user clicked a header row (index -1)
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = VehicleDGV.Rows[e.RowIndex];
+
+                LPlateTb.Text = row.Cells[0].Value?.ToString() ?? "";
+                MarkCb.SelectedItem = row.Cells[1].Value?.ToString();
+                ModelTb.Text = row.Cells[2].Value?.ToString() ?? "";
+                VYearCb.SelectedItem = row.Cells[3].Value?.ToString();
+                EngTypeCb.SelectedItem = row.Cells[4].Value?.ToString();
+                ColorTb.Text = row.Cells[5].Value?.ToString() ?? "";
+                MilleageTb.Text = row.Cells[6].Value?.ToString() ?? "";
+                TypeCb.SelectedItem = row.Cells[7].Value?.ToString();
+                BookedCb.SelectedItem = row.Cells[8].Value?.ToString();
+            }
         }
+
+
 
 
         private void pictureBox8_Click(object sender, EventArgs e)

@@ -87,16 +87,35 @@ namespace Transport_Management_System
 
         private void ShowBookings()
         {
-            Con.Open();
+            /*Con.Open();
             string Query = "select * from BookingTbl";
             SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
             SqlCommandBuilder Builder = new SqlCommandBuilder(sda);
             var ds = new DataSet();
             sda.Fill(ds);
             BookingDGV.DataSource = ds.Tables[0];
-            Con.Close();
+            Con.Close();*/
 
+        
+            try
+            {
+                Con.Open();
+                // Only show bookings where the Vehicle name DOES NOT start with 'Returned'
+                string Query = "select * from BookingTbl where Vehicle NOT LIKE 'Returned%'";
+                SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                BookingDGV.DataSource = dt;
+                Con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                if (Con.State == ConnectionState.Open) Con.Close();
+            }
         }
+
+        
 
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -235,6 +254,11 @@ namespace Transport_Management_System
             Login Obj = new Login();
             Obj.Show();
             this.Hide();
+        }
+
+        private void Bookings_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

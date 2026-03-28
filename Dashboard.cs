@@ -111,30 +111,26 @@ namespace Transport_Management_System
 
         private void SumAmt()
         {
-            Con.Open();
+            /*Con.Open();
             string Query = "select sum(Amount) from  BookingTbl";
             SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             IncNumLbl.Text = "Rs" + dt.Rows[0][0].ToString();
+            Con.Close();*/
+
+            Con.Open();
+            // This query still sees every row, even the 'Returned' ones
+            string Query = "select ISNULL(sum(Amount), 0) from BookingTbl";
+            SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            IncNumLbl.Text = "Rs " + dt.Rows[0][0].ToString();
             Con.Close();
 
         }
 
-        /*private void BestCust()
-        {
-            Con.Open();
-            string InnerQuery = "select max(Amount) from  BookingTbl";
-            DataTable dt1 = new DataTable();
-            SqlDataAdapter sda1 = new SqlDataAdapter(InnerQuery, Con);
-            sda1.Fill(dt1);
-            string Query = "select CustName from  BookingTbl where Amount = '" + dt1.Rows[0][0].ToString() + "'";
-            SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            BestCustLbl.Text = dt.Rows[0][0].ToString();
-            Con.Close();
-        }*/
+       
 
         private void BestCust()
         {
@@ -168,16 +164,7 @@ namespace Transport_Management_System
             }
         }
 
-        /* private void BestDriver()
-         {
-             Con.Open();
-             string Query = "SELECT  Driver, COUNT(*) from BookingTbl GROUP BY Driver ORDER BY COUNT(Driver) DESC";
-             SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
-             DataTable dt = new DataTable();
-             sda.Fill(dt);
-             BestDriverLbl.Text = dt.Rows[0][0].ToString();
-             Con.Close();
-         } */
+       
 
         private void BestDriver()
         {
