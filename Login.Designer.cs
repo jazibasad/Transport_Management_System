@@ -66,11 +66,12 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Bookman Old Style", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(285, 382);
+            this.label8.Location = new System.Drawing.Point(308, 377);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(175, 35);
             this.label8.TabIndex = 8;
             this.label8.Text = "User Name";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // UnameTb
             // 

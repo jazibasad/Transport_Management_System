@@ -64,5 +64,10 @@ namespace Transport_Management_System
         {
 
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
