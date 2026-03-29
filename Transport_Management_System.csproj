@@ -135,6 +135,7 @@
     <EmbeddedResource Include="Vehicles.resx">
       <DependentUpon>Vehicles.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Dockerfile" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
